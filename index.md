@@ -37,23 +37,23 @@ Load images from the github repo or from another source. You can add images usin
 
 ```
 # Add an image with markdown
-![Average gradient of Zernike polynomials over polygons](/assets/img/polynomial_thumbnail.jpg)
+![Average gradient of Zernike polynomials over polygons]({{ site.baseurl }}/assets/img/polynomial_thumbnail.jpg)
 
 ```
 
-![Average gradient of Zernike polynomials over polygons](/assets/img/polynomial_thumbnail.jpg)
+![Average gradient of Zernike polynomials over polygons]({{ site.baseurl }}/assets/img/polynomial_thumbnail.jpg)
 
 You can also add images using html tags, which allow for additional styling.
 
 ```
 <figure>
-    <img src="/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  >
+    <img src="{{ site.baseurl }}/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  >
     <figcaption class="text-center">Figure 1: with a border, centered</figcaption>
 </figure>
 ```
 
 <figure >
-    <img src="/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  >
+    <img src="{{ site.baseurl }}/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  >
     <figcaption class="text-center">Figure 1: with a border, centered</figcaption>
 </figure>
 
