@@ -14,6 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Header 2
 
 You can also include LaTeX functions. The MathJax library converts TeX and LaTeX into HTML. You can read more about it <a target="_blank" href="http://docs.mathjax.org/en/latest/basic/mathematics.html">here</a>.
+
 ```
     \begin{align*}
     f(x) &= x^2\\
@@ -39,19 +40,24 @@ Load images from the github repo or from another source. You can add images usin
 ![Average gradient of Zernike polynomials over polygons](/assets/img/polynomial_thumbnail.jpg)
 
 ```
+
 ![Average gradient of Zernike polynomials over polygons](/assets/img/polynomial_thumbnail.jpg)
 
 You can also add images using html tags, which allow for additional styling.
+
 ```
 <figure>
     <img src="/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  >
     <figcaption class="text-center">Figure 1: with a border, centered</figcaption>
 </figure>
 ```
-<figure>
+
+<figure >
     <img src="/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  >
     <figcaption class="text-center">Figure 1: with a border, centered</figcaption>
 </figure>
+
+
 
 
 #### Header 4
@@ -94,4 +100,6 @@ Embedded YouTube Vidoes
 ```
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n68f_Oh2N1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
+<div class="overflow-auto">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n68f_Oh2N1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

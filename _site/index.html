@@ -30,28 +30,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
-  <body>
-    <header>
-      <div class="jumbotron mb-0">
-        <div class="container">
-            <h1 class="display-4">The Ophthalmic Adaptive Optics Handbook</h1>
-            <p class="lead">This handbook is a comprehensive resource for users and developers of ophthalmic adaptive optics technology at all levels of expertise.</p>
-        </div>
-    </div>
-    </header>
-    <nav class="navbar navbar-expand-md navbar-dark  bg-dark mb-3">
-      <div class="container">
-        <a class="navbar-brand" href="/">The Handbook</a>
-        <a class="navbar-brand" href="/About">About</a>
-        <a class="navbar-brand" href="#">Revisions</a>
+  <body class="">
+    <div class="">
+      <header>
+        <div class="jumbotron mb-0">
+          <div class="container">
+              <h1 class="display-4">The Ophthalmic Adaptive Optics Handbook</h1>
+              <p class="lead">This handbook is a comprehensive resource for users and developers of ophthalmic adaptive optics technology at all levels of expertise.</p>
+          </div>
       </div>
-    </nav>
-    <section class="container">
-      <div>
+      </header>
 
-        <!-- Page Content  -->
-        <div id="content" class="content">
-          <h1 id="introduction">Introduction</h1>
+      <nav class="navbar navbar-expand-lg navbar-dark  bg-dark mb-3">
+        <div class="container">
+          <div class="justify-content-start">
+            <a class="navbar-brand mr-4" href="/">The Handbook</a>
+            <a class="navbar-brand mx-4" href="/About">About</a>
+            <a class="navbar-brand mx-4 href="#">Revisions</a>
+          </div>
+        </div>
+            
+      </nav>
+      
+    <div class="container">
+        
+        <div class="" >
+         
+          <div class="sidebar float-right sticky-top">
+            <h5 class="ml-3">Chapters</h3>
+              <ul class="sidebar-list nav ml-0 flex-column  flex-nowrap overflow-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Introduction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Geometrical optics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Wave optics/Diffraction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Polarization</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Physiological optics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Retina structure and optical properties</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Retinal imaging</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Ophthalmic wavefront sensing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Ophthalmic wavefront correction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Ophthalmic adaptive optics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Online calculators</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Optical design of ophthalmoscopes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sample optical designs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sample mechanical designs </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sample code/algorithms</a>
+                </li>
+              </ul>
+          </div>
+           <div class="content"><h1 id="introduction">Introduction</h1>
 
 <p><em>Emily Rousseau</em>  - 2 days ago</p>
 
@@ -60,6 +115,7 @@
 <h2 id="header-2">Header 2</h2>
 
 <p>You can also include LaTeX functions. The MathJax library converts TeX and LaTeX into HTML. You can read more about it <a target="_blank" href="http://docs.mathjax.org/en/latest/basic/mathematics.html">here</a>.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    \begin{align*}
     f(x) &amp;= x^2\\
     g(x) &amp;= \frac{1}{x}\\
@@ -83,14 +139,17 @@
 ![Average gradient of Zernike polynomials over polygons](/assets/img/polynomial_thumbnail.jpg)
 
 </code></pre></div></div>
+
 <p><img src="/assets/img/polynomial_thumbnail.jpg" alt="Average gradient of Zernike polynomials over polygons" /></p>
 
 <p>You can also add images using html tags, which allow for additional styling.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;figure&gt;
     &lt;img src="/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!"  &gt;
     &lt;figcaption class="text-center"&gt;Figure 1: with a border, centered&lt;/figcaption&gt;
 &lt;/figure&gt;
 </code></pre></div></div>
+
 <figure>
     <img src="/assets/img/polynomial_thumbnail.jpg" class="border mx-auto" alt="Alt text!" />
     <figcaption class="text-center">Figure 1: with a border, centered</figcaption>
@@ -156,13 +215,18 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/n68f_Oh2N1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 </code></pre></div></div>
+<div class="overflow-auto">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n68f_Oh2N1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
+</div>
+</div>
         </div>
-      </div>
-    </section>
+        
       
+      
+    </div>
+    </div>
     
+
     <footer class="my-4">
       <div class="container ">
       
