@@ -17,4 +17,3 @@ layout: default
 {{ site.posts.last.content }}
 </p>
 </div>
-
