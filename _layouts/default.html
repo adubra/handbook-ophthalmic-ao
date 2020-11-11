@@ -29,10 +29,10 @@
       <nav class="navbar navbar-expand-lg navbar-dark  bg-dark mb-3">
         <div class="container">
           <div class="justify-content-start">
-            <a class="navbar-brand mr-4" href="{{ '/' | relative_url }}">The Handbook</a>
-            <a class="navbar-brand mx-4" href="{{ '/About' | relative_url }}">About</a>
-            <a class="navbar-brand mx-4" href="{{ '/Revisions' | relative_url }}">Revisions</a>
-            <a class="navbar-brand mx-4" href="{{ '/Authors' | relative_url }}">Authors</a>
+            <a class="navbar-brand mr-4" href="{{ '/' | prepend: site.baseurl }}">The Handbook</a>
+            <a class="navbar-brand mx-4" href="{{ '/About' | prepend: site.baseurl }}">About</a>
+            <a class="navbar-brand mx-4" href="{{ '/Revisions' | prepend: site.baseurl }}">Revisions</a>
+            <a class="navbar-brand mx-4" href="{{ '/Authors' | prepend: site.baseurl }}">Authors</a>
           </div>
         </div>
             
