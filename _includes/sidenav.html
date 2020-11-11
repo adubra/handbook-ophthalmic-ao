@@ -1,0 +1,23 @@
+<div class="sidebar float-right sticky-top">
+    <h5 class="ml-3">Chapters</h3>
+      <ul class="sidebar-list nav ml-0 flex-column  flex-nowrap overflow-auto">
+
+        {% for category in site.categories %}
+        <div class="dropdown-divider"></div>
+        <li class="nav-item nav-link">  
+           <h6>{{ category[0]}}</h6> 
+        </li>
+            {% for post in category[1] reversed %}
+            
+            <li class="nav-item">
+            <a class="nav-link active" href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+            
+        {% endfor %}
+
+       
+
+        
+      </ul>
+  </div>
