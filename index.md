@@ -5,15 +5,24 @@
 layout: default
 ---
 
-<header class="post-header">
-    <h1 class="post-title p-name">{{ site.posts.last.title }}</h1>
-    <p class="post-meta">
-    <time class="dt-published">{{ site.posts.last.date | date: '%b %-d, %Y' }}</time>
-    </p>
-</header>
 
-<div class="post-content e-content">
-<p>
-{{ site.posts.last.content }}
-</p>
-</div>
+<h1 class="display-4">The Ophthalmic Adaptive Optics Handbook</h1>
+<p class="lead">{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
+<hr />
+
+## Table of Contents
+
+<ul>
+{% for category in site.categories %}
+    <li>
+    {{ category[0]}} 
+        <ul>
+    {% for post in category[1] reversed %}
+        <li>
+        <a class="" href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+</ul>

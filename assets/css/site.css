@@ -1,0 +1,8 @@
+
+#sidenav {
+    top: 70px !important;
+}
+
+#mainNav {
+    z-index: 1030 !important;
+}
