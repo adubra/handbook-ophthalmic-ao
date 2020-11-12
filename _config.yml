@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ophthalmic Adaptive Optics Handbook
+title: The Ophthalmic Adaptive Optics Handbook
 email: adubra@stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
  This handbook is a comprehensive resource for users and developers of ophthalmic adaptive optics technology at all levels of expertise.
