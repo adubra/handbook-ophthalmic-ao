@@ -4,8 +4,17 @@ title: Authors
 permalink: /authors/
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+### Vyas Akondi
+![Vyas Akondi PhD]({{ site.baseurl }}/assets/img/People/Vyas_Akondi_PhD.bmp)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+TODO: Brief bio and what motivates your ophthalmic AO work
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+### Ramkumar Sabesan
+![Ramkumar Sabesan PhD]({{ site.baseurl }}/assets/img/People/Ramkumar_Sabesan_PhD.bmp)
+
+TODO: Brief bio and what motivates your ophthalmic AO work
+
+### Alfredo Dubra
+![Alfredo Dubra PhD]({{ site.baseurl }}/assets/img/People/Alfredo_Dubra_PhD.bmp)
+
+TODO: Brief bio and what motivates your ophthalmic AO work

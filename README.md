@@ -69,6 +69,9 @@ _You **can** combine them_
 
 ### Images
 
+https://getbootstrap.com/docs/4.5/content/images/
+
+
 ```
 ![Average gradient of Zernike polynomials over polygons]({{ site.baseurl }}/assets/img/polynomial_thumbnail.jpg)
 ```
