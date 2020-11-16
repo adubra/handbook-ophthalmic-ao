@@ -1,4 +1,8 @@
 
+.bg-stanford {
+    background-color: #8c1515 !important;
+}
+
 #sidenav {
     top: 70px !important;
 }
