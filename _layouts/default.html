@@ -67,14 +67,14 @@
               </div>
             {% else %}
             <!--!>If the home page, hide the sidebar<!-->
-              <div class="col-sm-12 2mb-4" id="colContent">
+              <div class="col-sm-12 mb-4" id="colContent">
                 {{ content }}
               </div>
             {% endif %}
         </div>
     </div>
     </div>
-    <footer class="pt-2 pb-2 fixed-bottom bg-white content">
+    <footer class="fixed-bottom bg-white content" id="footer">
       <div class="container ">
       {% if site.github.is_project_page %}
         <small>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></small>

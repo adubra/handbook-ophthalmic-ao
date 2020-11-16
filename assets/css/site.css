@@ -13,8 +13,13 @@
 
 #sidenav {
     top: 70px !important;
+    padding-bottom: 30px;
 }
 
 #mainNav {
     z-index: 1030 !important;
+}
+
+#footer {
+    height: 30px;
 }
