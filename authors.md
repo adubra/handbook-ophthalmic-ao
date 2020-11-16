@@ -4,17 +4,15 @@ title: Authors
 permalink: /authors/
 ---
 
-### Vyas Akondi
-![Vyas Akondi PhD]({{ site.baseurl }}/assets/img/People/Vyas_Akondi_PhD.bmp)
-
-TODO: Brief bio and what motivates your ophthalmic AO work
-
-### Ramkumar Sabesan
-![Ramkumar Sabesan PhD]({{ site.baseurl }}/assets/img/People/Ramkumar_Sabesan_PhD.bmp)
-
-TODO: Brief bio and what motivates your ophthalmic AO work
-
-### Alfredo Dubra
-![Alfredo Dubra PhD]({{ site.baseurl }}/assets/img/People/Alfredo_Dubra_PhD.bmp)
-
-TODO: Brief bio and what motivates your ophthalmic AO work
+<ul class="list-unstyled ml-0">
+  {% for author in site.authors %}
+    <li class="media mb-4">
+        <img class="mr-3 img-thumbnail align-self-start" src= "{{ author.image_path | prepend: site.baseurl }}" width="150" >
+        <div class="media-body">
+            <h3 class="mt-0 mb-1">{{ author.name }}</h3>
+            <h5>{{ author.position }}</h5>
+            {{ author.content | markdownify }}
+        </div>
+    </li>
+  {% endfor %}
+</ul>
