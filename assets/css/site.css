@@ -3,6 +3,14 @@
     background-color: #8c1515 !important;
 }
 
+.content a {
+    color: #736C51;
+}
+.content a:hover {
+    text-decoration: none;
+    color: #212529;
+}
+
 #sidenav {
     top: 70px !important;
 }

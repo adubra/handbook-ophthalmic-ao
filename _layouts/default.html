@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
-  <body class="">
+  <body>
     <div class="">
       <nav class=" navbar navbar-expand-md navbar-dark  bg-stanford mb-3 sticky-top" id="mainNav">
         <div class="container">
@@ -39,8 +39,7 @@
           </div>
         </div>
       </nav>
-      <div class="container mb-3">
-
+      <div class="container mb-3 content">
         {% if page.url != "/" %}
           {% assign crumbs = page.url |  split: '/' %}
 
@@ -53,10 +52,10 @@
             {% endif %}
           {% endfor %}
         {% endif %}
-        </div>
+      </div>
       
   
-    <div class="container">
+    <div class="container content">
         <div class="row" >
             {% if page.url != "/" %}
             <!--!>If not the home page, show the sidebar<!-->
@@ -73,12 +72,9 @@
               </div>
             {% endif %}
         </div>
-        
-      
-      
     </div>
     </div>
-    <footer class="pt-2 pb-2 fixed-bottom bg-white ">
+    <footer class="pt-2 pb-2 fixed-bottom bg-white content">
       <div class="container ">
       {% if site.github.is_project_page %}
         <small>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></small>
