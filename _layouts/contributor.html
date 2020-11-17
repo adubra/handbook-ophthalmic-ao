@@ -11,3 +11,16 @@ layout: default
         </div>
     </li>
 </ul>
+
+<!--!>List of contributions<!-->
+{% assign contributions = site.posts | where: "author", page.title %}
+{% if contributions.size > 0 %}
+<h4>Authored Chapters</h4>
+<ul>
+    {% for post in contributions reversed %}
+    <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
