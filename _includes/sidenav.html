@@ -8,8 +8,8 @@
     </li>
         {% for post in category[1] reversed %}
         
-        <li class="nav-item pb-2">
-        <a class="py-2  pl-0" href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+        <li class="nav-item pb-3">
+        <a class=" pl-0" href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     {% endfor %}
