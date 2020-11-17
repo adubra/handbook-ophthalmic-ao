@@ -1,4 +1,3 @@
-$(document).ready(function () {
-
-
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
 });
