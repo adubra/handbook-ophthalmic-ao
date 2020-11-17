@@ -3,8 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+search: exclude
 ---
-<h1 class="display-4">Ophthalmic Adaptive Optics Handbook</h1>
+<h1 class="mt-3">{{ site.long_title  }}</h1>
 <p class="lead">{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
 <hr />
 

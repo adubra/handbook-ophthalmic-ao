@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: OAO Handbook
+title: HOAO
+long_title: Handbook for Ophthalmic AO
 email: adubra@stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
  A comprehensive resource for users and developers of ophthalmic adaptive optics.
@@ -29,7 +30,9 @@ plugins:
   - jekyll-feed
 
 collections:
-  authors:
+  contributors:
+    output: true
+    permalink: /:collection/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

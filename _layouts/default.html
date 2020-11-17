@@ -20,7 +20,7 @@
     <div class="">
       <nav class=" navbar navbar-expand-lg navbar-dark  bg-stanford mb-3 sticky-top" id="mainNav">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{{ '/' | prepend: site.baseurl }}">The Ophthalmic AO Handbook</a>
+          <a class="navbar-brand mr-4" href="{{ '/' | prepend: site.baseurl }}"> {{ site.long_title }} </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,10 +33,10 @@
                 <a class="nav-link" href="{{ '/revisions' | prepend: site.baseurl }}">Revisions</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ '/authors' | prepend: site.baseurl }}">Authors</a>
+                <a class="nav-link" href="{{ '/contributors' | prepend: site.baseurl }}">Contributors</a>
               </li>
             </ul>
-            <form action="{{ '/search.html' | prepend:site.baseurl }}" method="get" class="form-inline my-2 my-lg-0 flex-nowrap">
+            <form action="{{ '/search.html' | prepend: site.baseurl }}" method="get" class="form-inline my-2 my-lg-0 flex-nowrap">
               <input class="form-control mr-sm-2 search-box" name="query" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -46,13 +46,14 @@
       <div class="container mb-3 content">
         {% if page.url != "/" %}
           {% assign crumbs = page.url |  split: '/' %}
-
           <a id="breadcrumbHome" href="{{ '/' | prepend: site.baseurl }}">Home</a>
           {% for crumb in crumbs offset: 1 %}
             {% if forloop.last %}
-              / {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+              <!--!>/ {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}<!-->
+              / {{ page.title }}
             {% else %}
-              / <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+              / <a href="{{ crumb | prepend: '/' | prepend: site.baseurl }}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+              <!--!>/ <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a><!-->
             {% endif %}
           {% endfor %}
         {% endif %}

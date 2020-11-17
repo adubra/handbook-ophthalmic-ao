@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
 ### Foreword
@@ -17,7 +17,7 @@ November 2020
 ### Citation
 Please cite individual  chapters/sections as follows: First Name, Last Name, "chapter/section title," Byers Eye Institute, Stanford University (current year). TODO: URL
 
-Please cite the entire handbook as: V. Akondi, R. Sabesan and A. Dubra, "Opthalmic Adaptive Optics Handbook," Byers Eye Institute, Stanford University (current year). TODO: URL
+Please cite the entire handbook as: V. Akondi, R. Sabesan and A. Dubra, "Ophthalmic Adaptive Optics Handbook," Byers Eye Institute, Stanford University (current year). TODO: URL
 
 ### Errors and typos
 We are certainly not infalible, and like everyone, make frequent mistakes. So, please let us know of anything that needs fixing.
@@ -27,7 +27,7 @@ The handbook is meant to be a living resource that serves the ophthalmic AO comm
 
 ### Copyright
 
-The material in this handbook is intended for non-commercial academic purposes. Content may be used with a non-exclusive rights under a Attribution, Noncommercial 4.0 International (CC BY-NC) Creative Commons license, citing Opthalmic Adaptive Optics Handbook TODO: URL as the source.
+The material in this handbook is intended for non-commercial academic purposes. Content may be used with a non-exclusive rights under a Attribution, Noncommercial 4.0 International (CC BY-NC) Creative Commons license, citing Ophthalmic Adaptive Optics Handbook TODO: URL as the source.
 
 ### Webvision
 
