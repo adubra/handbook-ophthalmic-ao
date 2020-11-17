@@ -1,6 +1,7 @@
 ---
+layout: default
+title: Vyas Akondi
 short_name: Vyas
-name: Vyas Akondi
 position: 
 image_path: "/assets/img/People/Vyas_Akondi_PhD.bmp"
 ---

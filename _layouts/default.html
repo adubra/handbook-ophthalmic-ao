@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="">
-      <nav class=" navbar navbar-expand-md navbar-dark  bg-stanford mb-3 sticky-top" id="mainNav">
+      <nav class=" navbar navbar-expand-lg navbar-dark  bg-stanford mb-3 sticky-top" id="mainNav">
         <div class="container">
           <a class="navbar-brand mr-4" href="{{ '/' | prepend: site.baseurl }}">The Ophthalmic AO Handbook</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,10 @@
                 <a class="nav-link" href="{{ '/authors' | prepend: site.baseurl }}">Authors</a>
               </li>
             </ul>
+            <form action="{{ '/search.html' | prepend:site.baseurl }}" method="get" class="form-inline my-2 my-lg-0 flex-nowrap">
+              <input class="form-control mr-sm-2 search-box" name="query" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
           </div>
         </div>
       </nav>

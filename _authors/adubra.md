@@ -1,6 +1,7 @@
 ---
+layout: default
+title: Alfredo Dubra
 short_name: Alf
-name: Alfredo Dubra
 position: Associate Professor, Ophthalmology
 image_path: "/assets/img/People/Alfredo_Dubra_PhD.bmp"
 ---
