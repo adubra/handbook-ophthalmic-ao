@@ -17,7 +17,7 @@ November 2020
 ### Citation
 Please cite individual  chapters/sections as follows: First Name, Last Name, "chapter/section title," Byers Eye Institute, Stanford University (current year). TODO: URL
 
-Please cite the entire handbook as: V. Akondi, R. Sabesan and A. Dubra, "Opthalmic Adaptive Optics Handbook," Byers Eye Institute, Stanford University (current year). TODO: URL
+Please cite the entire handbook as: V. Akondi, R. Sabesan and A. Dubra, "Ophthalmic Adaptive Optics Handbook," Byers Eye Institute, Stanford University (current year). TODO: URL
 
 ### Errors and typos
 We are certainly not infalible, and like everyone, make frequent mistakes. So, please let us know of anything that needs fixing.
