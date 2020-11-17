@@ -5,15 +5,15 @@ permalink: /contributors
 ---
 {% assign roles =  site.contributors |  map: 'role' | join: ','  | split: ',' | uniq %}
 {% for role in roles %}
-  <h2 class="mb-3">{{ role }}s</h2>
+  <h3 class="mb-3">{{ role }}s</h3>
   <ul class="list-unstyled ml-0">
     {% for author in site.contributors  %}
     {% if author.role == role %}
       <li class="media mb-4">
           <img class="mr-3 img-thumbnail align-self-start" src= "{{ author.image_path | prepend: site.baseurl }}" width="150" >
           <div class="media-body">
-              <h3 class="mt-0 mb-1">{{ author.title }}</h3>
-              <h5>{{ author.position }}</h5>
+              <h4 class="mt-0 mb-1"><a href="{{ author.url | prepend: site.baseurl }}">{{ author.title }}</a></h4>
+              <h6>{{ author.position }}</h6>
               {{ author.content | markdownify }}
           </div>
       </li>
