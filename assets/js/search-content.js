@@ -2,8 +2,9 @@
 permalink: /assets/js/search-content.js
 ---
 window.store = {
-  {% assign searchable_pages = site.pages  %}
-  {% assign searchable_documents = site.documents %}
+  //{% assign searchable_pages = site.pages  %}
+  //{% assign searchable_documents = site.documents %}
+  {% assign searchable_pages = site.html_pages  %}
   {% for page in searchable_pages %}
     {% unless page.search == "exclude" %}
     {% assign searchable_documents = searchable_documents | push: page %}
