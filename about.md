@@ -27,7 +27,7 @@ The handbook is meant to be a living resource that serves the ophthalmic AO comm
 
 ### Copyright
 
-The material in this handbook is intended for non-commercial academic purposes. Content may be used with a non-exclusive rights under a Attribution, Noncommercial 4.0 International (CC BY-NC) Creative Commons license, citing Opthalmic Adaptive Optics Handbook TODO: URL as the source.
+The material in this handbook is intended for non-commercial academic purposes. Content may be used with a non-exclusive rights under a Attribution, Noncommercial 4.0 International (CC BY-NC) Creative Commons license, citing Ophthalmic Adaptive Optics Handbook TODO: URL as the source.
 
 ### Webvision
 
