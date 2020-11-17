@@ -1,22 +1,28 @@
+
 <h1>{{ page.title }}</h1>
 <div class="search">
-  <form action="{{ '/search.html' | prepend:site.baseurl }}" method="get" class="form-inline my-2 my-lg-0 flex-nowrap">
-    <input class="form-control mr-sm-2 search-box" name="query" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-stanford my-2 my-sm-0" type="submit">Search</button>
+  <form action="{{ '/search.html' | prepend:site.baseurl }}" method="get" class="form-inline my-2 my-lg-0 flex-wrap">
+    <input class="form-control mr-sm-2 search-box w-50 mb-2" name="query" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-stanford mr-sm-2 mb-2 " type="submit">Search</button>
+    <button type="button" class="mb-2 btn btn-outline-secondary" data-toggle="collapse" href="#divAdvancedSearchRules" role="button" aria-expanded="false" aria-controls="divAdvancedSearchRules" >
+      Advanced Search Rules
+      <i class="fa fa-chevron-down pull-right"></i>
+    </button>
   </form>
-  <button type="button" class="mt-3 btn btn-secondary btn-sm" data-container="body" data-html="true" data-toggle="popover" data-placement="right" 
-  data-content="<ul><li>Include * as a wildcard in your search term, e.g. 'foo*'.</li>
-    <li>Search specific fields, e.g. 'title:Introduction' or 'author:Alfredo'</li>
-    <li>Combine multiple search terms with a space between terms, e.g. 'title:foo* bar'</li>
-    <li>Boost the importance of terms in multi-term searches, e.g. 'foo^10 bar'</li>
-    <li>Allow fuzzy by specifying the word edit distance, e.g. 'foo~1'</li>
-    <li>Allow fuzzy by specifying the word edit distance, e.g. 'foo~1'</li>
-    <li>Specify required and avoided terms with + and - , e.g. '+foo bar -baz'</li>
-  </ul>">Advanced Search Rules
-  </button>
-  <ul id="search-results" class="search-results mt-3"></ul>
+  
+  <div class="collapse mt-2" id="divAdvancedSearchRules" style="font-size:80%">
+    <dl>
+      <dt>Wildcards:</dt><dd>Include an asterisk (*) as a wildcard in your search term, e.g. <code class="language-plaintext highlighter-rouge">foo*</code></dd>
+      <dt>Fields:</dt><dd>Restrict the search to a specific field using a colon (:) and search multiple terms by adding space between terms. e.g. <code class="language-plaintext highlighter-rouge">title:Introduction author:Dubra</code></dd>
+      <dt>Boost:</dt><dd>Boost the importance of terms in multi-term searches with caret (^) followed by an integer representing importance, e.g. <code class="language-plaintext highlighter-rouge">foo^10 bar^5 baz</code></dd>
+      <dt>Fuzzy Matches:</dt><dd>Allow fuzzy matching with a tilda (~) followed by an integer represting the word edit distance, e.g. <code class="language-plaintext highlighter-rouge">foo~1</code></dd>
+      <dt>Term Presence:</dt><dd>Specify required and avoided terms with + and - , e.g. <code class="language-plaintext highlighter-rouge">+foo bar -baz</code></dd>
+    </dl>
+  </div>
+  <br />
+  <ul id="search-results" class="search-results"></ul>
 </div>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 <script src="{{ '/assets/js/search-content.js' | relative_url  }}"></script>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
