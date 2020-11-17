@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: OAO Handbook
-long_title: The Ophthalmic AO Handbook
+title: HOAO
+long_title: Handbook for Ophthalmic AO
 email: adubra@stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
  A comprehensive resource for users and developers of ophthalmic adaptive optics.
