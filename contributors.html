@@ -3,11 +3,9 @@ layout: page
 title: Contributors
 permalink: /contributors
 ---
-
-
 {% assign roles =  site.contributors |  map: 'role' | join: ','  | split: ',' | uniq %}
 {% for role in roles %}
-  <h2>{{ role }}s</h2>
+  <h2 class="mb-3">{{ role }}s</h2>
   <ul class="list-unstyled ml-0">
     {% for author in site.contributors  %}
     {% if author.role == role %}
