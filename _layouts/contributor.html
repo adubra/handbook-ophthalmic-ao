@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<ul class="list-unstyled ml-0">
+    <li  class="media mb-4">
+        <img class="mr-3 img-thumbnail align-self-start" src= "{{ page.image_path | prepend: site.baseurl }}" width="150" >
+        <div class="media-body">
+            <h3 class="mt-0 mb-1">{{ page.title }}</h3>
+            <h5>{{ page.position }}</h5>
+            {{ page.content | markdownify }}
+        </div>
+    </li>
+</ul>

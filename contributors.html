@@ -1,0 +1,27 @@
+---
+layout: page
+title: Contributors
+permalink: /contributors
+---
+
+
+{% assign roles =  site.contributors |  map: 'role' | join: ','  | split: ',' | uniq %}
+{% for role in roles %}
+  <h2>{{ role }}s</h2>
+  <ul class="list-unstyled ml-0">
+    {% for author in site.contributors  %}
+    {% if author.role == role %}
+      <li class="media mb-4">
+          <img class="mr-3 img-thumbnail align-self-start" src= "{{ author.image_path | prepend: site.baseurl }}" width="150" >
+          <div class="media-body">
+              <h3 class="mt-0 mb-1">{{ author.title }}</h3>
+              <h5>{{ author.position }}</h5>
+              {{ author.content | markdownify }}
+          </div>
+      </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+

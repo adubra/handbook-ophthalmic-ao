@@ -40,6 +40,5 @@ button .fa {
     transition: .3s transform ease-in-out;
 }
 button[aria-expanded="true"] .fa {
-     /* symbol for "collapsed" panels */
     transform: rotate(180deg);
 }
