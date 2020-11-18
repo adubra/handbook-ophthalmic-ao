@@ -1,7 +1,7 @@
 ---
 layout: contributor
-last name: Ramkumar
-first name: Sabesan
+last name: Sabesan
+first name: Ramkumar
 position: Assistant Research Professor, Ophthalmology, University of Washington
 image_path: "/assets/img/People/Ramkumar_Sabesan_PhD.bmp"
 role: Editor
