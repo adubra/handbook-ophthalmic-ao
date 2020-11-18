@@ -3,23 +3,22 @@ layout: page
 title: Contributors
 permalink: /contributors
 ---
+{% assign authors_sorted = site.contributors | sort: "last_name" %}
 {% assign roles =  site.contributors |  map: 'role' | join: ','  | split: ',' | uniq %}
 {% for role in roles %}
-  <h3 class="mb-3">{{ role }}s</h3>
+  <h2 class="mb-3">{{ role }}s</h2>
   <ul class="list-unstyled ml-0">
-    {% for author in site.contributors  %}
+    {% for author in authors_sorted  %}
     {% if author.role == role %}
-      <li class="media mb-4">
-          <img class="mr-3 img-thumbnail align-self-start" src= "{{ author.image_path | prepend: site.baseurl }}" width="150" >
-          <div class="media-body">
-              <h4 class="mt-0 mb-1"><a href="{{ author.url | prepend: site.baseurl }}">{{ author.title }}</a></h4>
-              <h6>{{ author.position }}</h6>
-              {{ author.content | markdownify }}
-          </div>
+      <li class="mb-4 clearfix">
+          <img class="mr-3 img-thumbnail float-left" src= "{{ author.image_path | prepend: site.baseurl }}" width="150" >
+          <div class="" >
+            <h4 class="mt-0 mb-1"><a href="{{ author.url | prepend: site.baseurl }}">{{ author.title }}</a></h4>
+            <h6>{{ author.position }}</h6>
+            {{ author.content | markdownify }}
+          </div>  
       </li>
     {% endif %}
     {% endfor %}
   </ul>
 {% endfor %}
-
-

@@ -1,8 +1,8 @@
 ---
 layout: contributor
-title: Vyas Akondi
-short_name: Vyas
-position: Senior Research Scientist
+last_name: Akondi
+first_name: Vyas
+position: Senior Research Scientist, Stanford University
 image_path: "/assets/img/People/Vyas_Akondi_PhD.bmp"
 role: Editor
 ---
