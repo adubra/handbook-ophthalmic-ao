@@ -1,7 +1,7 @@
 ---
 layout: contributor
-last name: Dubra
-first name: Alfredo
+last_name: Dubra
+first_name: Alfredo
 position: Associate Professor, Ophthalmology, Stanford University
 image_path: "/assets/img/People/Alfredo_Dubra_PhD.bmp"
 role: Editor

@@ -3,11 +3,12 @@ layout: page
 title: Contributors
 permalink: /contributors
 ---
+{% assign authors_sorted = site.contributors | sort: "last_name" %}
 {% assign roles =  site.contributors |  map: 'role' | join: ','  | split: ',' | uniq %}
 {% for role in roles %}
-  <h3 class="mb-3">{{ role }}s</h3>
+  <h2 class="mb-3">{{ role }}s</h2>
   <ul class="list-unstyled ml-0">
-    {% for author in site.contributors  %}
+    {% for author in authors_sorted  %}
     {% if author.role == role %}
       <li class="media mb-4">
           <img class="mr-3 img-thumbnail align-self-start" src= "{{ author.image_path | prepend: site.baseurl }}" width="150" >
