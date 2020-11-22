@@ -1,9 +1,34 @@
 ---
 layout: post
 title:  "Introduction"
-date:   2020-11-01 17:39:57 -0800
+date:   2020-11-21 17:39:57 -0800
 category: Part 1
-author: Alfredo Dubra
+author: Somebody
 permalink: /introduction/
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+### Light propagation
+
+Rays and wavefronts to describe light propagation
+Explain that mostly geometrical optics is sufficient to understand adaptive optics, although diffraction theory is necessary to explain some phenomena affecting AO.
+
+### Optical systems
+Reflection, refraction, absorption, scattering, diffraction
+
+Pupil planes (entrance, exit others)
+marginal ray, chief/principal ray
+
+### Imaging systems
+
+Flood illumination and scanning optical systems.
+
+Converging wavefront.
+
+Wavefront aberration as the departure of the wavefront from the ideal spherical or flat shape. More general definition as a difference between wavefronts.
+
+Wavefront polynomial as an approximation
+
+Third order or Seidel aberrations
+
+Highlight that aberrations can and do change across fields of view
+
+Discuss isoplanatism concept and consider alternative definitions in terms or various wavefront RMS norms (e.g. L0, L1, L2, others?)
