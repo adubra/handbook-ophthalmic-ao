@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: HOAO
-long_title: Handbook of Ophthalmic AO
+book_title: Handbook of Ophthalmic AO
+citation: V. Akondi, R. Sabesan and A. Dubra, “Handbook of Ophthalmic AO,” Byers Eye Institute, Stanford University (current year)
 email: adubra@stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
  A comprehensive resource for users and developers of ophthalmic adaptive optics.
