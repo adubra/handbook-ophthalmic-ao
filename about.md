@@ -28,7 +28,6 @@ The handbook is meant to be a living resource that serves the ophthalmic AO comm
 ### Copyright
 
 The material in this handbook is intended for non-commercial academic purposes. Content may be used with a non-exclusive rights under a Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) Creative Commons license, citing {{ site.book_title }} TODO: URL as the source.
-<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text">This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" /></a></p>
 
 ### Webvision
 
