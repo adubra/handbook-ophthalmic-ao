@@ -5,7 +5,7 @@
 layout: default
 search: exclude
 ---
-<h1 class="mt-3">{{ site.long_title  }}</h1>
+<h1 class="mt-3">{{ site.book_title  }}</h1>
 <p class="lead">{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
 <hr />
 
