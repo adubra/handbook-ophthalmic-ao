@@ -1,28 +1,23 @@
 ---
 layout: default
 ---
+<img class="mr-3 mt-2 img-thumbnail float-left" src= "{{ page.image_path | prepend: site.baseurl }}" width="150" >
+<h1>{{ page.title }}</h1>
+<h6>{{ page.position }}</h6>
+{{ page.content | markdownify }}
 
-<ul class="list-unstyled ml-0">
-    <li  class="media mb-4">
-        <img class="mr-3 img-thumbnail align-self-start" src= "{{ page.image_path | prepend: site.baseurl }}" width="150" >
-        <div class="media-body">
-            <h1>{{ page.title }}</h1>
-            <h6>{{ page.position }}</h6>
-            {{ page.content | markdownify }}
-
-            <!--!>List of contributions<!-->
-            {% assign contributions = site.posts | where: "author", page.title %}
-            {% if contributions.size > 0 %}
-            <h2 class="mt-4">Authored Chapters</h2>
-            <ul>
-                {% for post in contributions reversed %}
-                <li>
-                    <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </div>
+<!--!>List of contributions<!-->
+{% assign contributions = site.posts | where: "author", page.title %}
+{% if contributions.size > 0 %}
+<h2 class="mt-4">Authored Chapters</h2>
+<ul>
+    {% for post in contributions reversed %}
+    <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
     </li>
+    {% endfor %}
 </ul>
+{% endif %}
+
+
 
