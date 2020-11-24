@@ -5,13 +5,27 @@
 layout: default
 search: exclude
 ---
-<h1 class="mt-3">{{ site.long_title  }}</h1>
+<h1 class="mt-3">{{ site.book_title  }}</h1>
 <p class="lead">{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
 <hr />
 
 ## Table of Contents
 
 <ul>
+{% for section in site.data.toc.sections %}
+    <li>  
+        {{ section.title }}
+        <ul>
+            {% for chapter in section.chapters %}
+            {% assign postlookup = site.posts | where: "permalink", chapter.url | first %}
+            <li>
+            <a class="" href="{{ chapter.url | prepend:site.baseurl }}">{{ postlookup.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+<!--
 {% for category in site.categories %}
     <li>
     {{ category[0]}} 
@@ -25,3 +39,4 @@ search: exclude
     </li>
 {% endfor %}
 </ul>
+//--->

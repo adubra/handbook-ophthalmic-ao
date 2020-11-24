@@ -4,7 +4,7 @@ title:  "Geometrical optics"
 date:   2020-11-02 15:39:57 -0800
 category: Part 1
 author: Alfredo Dubra
-permalink: /geometrical-optics/
+permalink: /geometrical-optics
 ---
 
 ## Notation conventions
