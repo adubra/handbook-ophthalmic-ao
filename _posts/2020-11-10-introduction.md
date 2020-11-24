@@ -4,7 +4,7 @@ title:  "Introduction"
 date:   2020-11-21 17:39:57 -0800
 category: Part 1
 author: Somebody
-permalink: /introduction/
+permalink: /introduction
 ---
 ### Light propagation
 

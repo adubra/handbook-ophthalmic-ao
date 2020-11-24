@@ -12,6 +12,20 @@ search: exclude
 ## Table of Contents
 
 <ul>
+{% for section in site.data.toc.sections %}
+    <li>  
+        {{ section.title }}
+        <ul>
+            {% for chapter in section.chapters %}
+            {% assign postlookup = site.posts | where: "permalink", chapter.url | first %}
+            <li>
+            <a class="" href="{{ chapter.url | prepend:site.baseurl }}">{{ postlookup.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+<!--
 {% for category in site.categories %}
     <li>
     {{ category[0]}} 
@@ -25,3 +39,4 @@ search: exclude
     </li>
 {% endfor %}
 </ul>
+//--->

@@ -1,5 +1,21 @@
 <div class="sticky-top overflow-auto sidebar-list"  id="sidenav">
-  <h5 class="">Chapters</h5>
+  <h5 class="">{{ site.data.toc.title }}</h5>
+  <ul class="nav ml-0 flex-column flex-nowrap ">
+    {% for section in site.data.toc.sections %}
+    <div class="dropdown-divider"></div>
+    <li class="nav-item pl-0">  
+        <h6>{{ section.title }}</h6> 
+    </li>
+      {% for chapter in section.chapters %}
+      {% assign postlookup = site.posts | where: "permalink", chapter.url | first %}
+      <li class="nav-item pb-3">
+      <a class=" pl-0" href="{{ chapter.url | prepend:site.baseurl }}">{{ postlookup.title }}</a>
+      </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+
+<!----
   <ul class="nav ml-0 flex-column flex-nowrap ">
     {% for category in site.categories %}
     <div class="dropdown-divider"></div>
@@ -15,3 +31,4 @@
     {% endfor %}
   </ul>
 </div>
+//--->
