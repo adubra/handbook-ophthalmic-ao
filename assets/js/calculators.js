@@ -20,7 +20,7 @@ $('#frmSampleCalculation1').submit(function(event){
 });
 
 
-
+var chart = '';
 function drawPlot(expression, result, userInput){
     try {
         const expr = math.compile(expression);
@@ -29,41 +29,64 @@ function drawPlot(expression, result, userInput){
         var startRange = -10;
         var endRange = 10;
         if (result){
-            var max = result * 2;
+            var max = Math.round(result) * 2;
             startRange = - max;
             endRange = max;
         }
-        const xValues = math.range(startRange, endRange, 0.5).toArray()
+        const xValues = math.range(startRange, endRange + 1, 0.5).toArray()
         var mUserInput = userInput["m"];
         const yValuesIfM = xValues.map(function (x) {
             return {x, y: expr.evaluate({x: x, m: mUserInput})} 
         })
-        // render the plot using chart.js
-        var ctx = document.getElementById('plot').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-            // The data for our dataset
-            data: {
-                datasets: [{
-                    label: expression,
-                    data: yValuesIfM,
-                    pointRadius: 0,
-                    fill: false,
-                    borderColor: ''
+
+
+        // Create or update the chart using chart.js
+        if (chart == ''){
+            var ctx = document.getElementById('plot').getContext('2d');
+            chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+                // The data for our dataset
+                data: {
+                    datasets: [{
+                        label: expression,
+                        data: yValuesIfM,
+                        pointRadius: 0,
+                        fill: false,
+                        borderColor: ''
+                    }
+                ],
+                },
+                // Configuration options go here
+                options: {
+                    scales:{
+                        xAxes: [{
+                            type: 'linear',
+                            position: 'bottom',
+                            ticks: {
+                                min: startRange,
+                                max: endRange
+                            }
+                        }]
+                    }
                 }
-            ],
-            },
-            // Configuration options go here
-            options: {
-                scales:{
-                    xAxes: [{
-                        type: 'linear',
-                        position: 'bottom'
-                    }]
-                }
-            }
-        });
+            });
+        }
+        else {
+            chart.options.scales.xAxes[0] = { type: 'linear', position: 'bottom', ticks: {min: startRange, max: endRange}} ; 
+            chart.data.labels.pop();
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data.pop();
+            });
+            chart.data.labels.push(expression);
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data = yValuesIfM; //.push(yValuesIfM);
+            });
+            
+            chart.update(0);
+
+        }
+        
 
     }
     catch (err) {
