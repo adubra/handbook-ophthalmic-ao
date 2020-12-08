@@ -18,7 +18,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <p>Calculation description</p>
         <div>
             \begin{align*}
-            f(x) &= x^2 + (\sqrt{y} * sin(x)) + (y * cos(x/2))
+            f(x) &= x^2 + (\sqrt{m} * sin(x)) + (m * cos(x/2))
             \end{align*}
         </div>
     </div>
@@ -32,10 +32,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     <input name="X" class="form-control">
                 </div>
                  <div class="col-auto mt-3">
-                    <label class="col-form-label">Value for y:</label>
+                    <label class="col-form-label">Value for m:</label>
                 </div>
                 <div class="col-auto mt-3">
-                    <input name="Y" class="form-control">
+                    <input name="M" class="form-control">
                 </div>
                 <div class="col-12 mt-3">
                     <button type="submit" class="btn btn-primary">Calculate</button>

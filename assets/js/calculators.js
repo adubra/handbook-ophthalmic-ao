@@ -7,20 +7,21 @@ $('#frmSampleCalculation1').submit(function(event){
     //Get form data
     var formData = new FormData($(this)[0]);
     var x = formData.get('X');
-    var y = formData.get('Y');
+    var m = formData.get('M');
 
     //Do some validation here if you want
    
     //Do calculation
-    var expression = "x^2 + (sqrt(y) * sin(x)) + (y * cos(x/2))"; 
-    var result = math.compile(expression).evaluate({x: x, y: y});
-    drawPlot(expression, result);
+    var expression = "x^2 + (sqrt(m) * sin(x)) + (m * cos(x/2))"; 
+    var result = math.compile(expression).evaluate({x: x, m: m});
+    var userInput = {"x": x, "m": m};
+    drawPlot(expression, result, userInput);
     $('#calcultionResult').val(result);
 });
 
 
 
-function drawPlot(expression, result){
+function drawPlot(expression, result, userInput){
     try {
         const expr = math.compile(expression);
 
@@ -33,10 +34,10 @@ function drawPlot(expression, result){
             endRange = max;
         }
         const xValues = math.range(startRange, endRange, 0.5).toArray()
-        const yValues = xValues.map(function (x,y) {
-            return {x, y: expr.evaluate({x: x, y: y})} 
+        var mUserInput = userInput["m"];
+        const yValuesIfM = xValues.map(function (x) {
+            return {x, y: expr.evaluate({x: x, m: mUserInput})} 
         })
-
         // render the plot using chart.js
         var ctx = document.getElementById('plot').getContext('2d');
         var chart = new Chart(ctx, {
@@ -45,12 +46,13 @@ function drawPlot(expression, result){
             // The data for our dataset
             data: {
                 datasets: [{
-                    label: expression ,
-                    data: yValues,
+                    label: expression,
+                    data: yValuesIfM,
                     pointRadius: 0,
                     fill: false,
                     borderColor: ''
-                }]
+                }
+            ],
             },
             // Configuration options go here
             options: {
