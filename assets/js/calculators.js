@@ -12,7 +12,7 @@ $('#frmSampleCalculation1').submit(function(event){
     //Do some validation here if you want
    
     //Do calculation
-    var expression = "x^2 + (sqrt(m) * sin(x)) + (m * cos(x/2))"; 
+    var expression = "(sqrt(m) * sin(x)) + (m * cos(x/2))"; 
     var result = math.compile(expression).evaluate({x: x, m: m});
     var userInput = {"x": x, "m": m};
     drawPlot(expression, result, userInput);
@@ -29,7 +29,7 @@ function drawPlot(expression, result, userInput){
         var startRange = -10;
         var endRange = 10;
         if (result){
-            var max = Math.round(result) * 2;
+            var max = Math.round(userInput["x"]) * 2;
             startRange = - max;
             endRange = max;
         }
@@ -80,7 +80,7 @@ function drawPlot(expression, result, userInput){
             });
             chart.data.labels.push(expression);
             chart.data.datasets.forEach((dataset) => {
-                dataset.data = yValuesIfM; //.push(yValuesIfM);
+                dataset.data = yValuesIfM;
             });
             
             chart.update(0);
