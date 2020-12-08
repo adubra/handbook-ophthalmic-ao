@@ -12,7 +12,7 @@ $('#frmSampleCalculation1').submit(function(event){
     //Do some validation here if you want
    
     //Do calculation
-    var expression = "(sqrt(m) * sin(x)) + (m * cos(x/2))"; 
+    var expression = "x^2 + (sqrt(m) * sin(x)) + (m * cos(x/2))"; 
     var result = math.compile(expression).evaluate({x: x, m: m});
     var userInput = {"x": x, "m": m};
     drawPlot(expression, result, userInput);
@@ -59,6 +59,14 @@ function drawPlot(expression, result, userInput){
                 },
                 // Configuration options go here
                 options: {
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+                    },
                     scales:{
                         xAxes: [{
                             type: 'linear',
