@@ -16,7 +16,7 @@ HINT TO SELF: <a href="#Focal_shift_calculator2">other calculator</a>
 There are two points of interest in a converging spherical wavefront. The <b>geometrical focus</b>, where the rays orthogonal to the wavefront converge (see figure below), and the point of maximum intensity , which is shifted towards the incoming waefront due to diffraction, and it is therefore referred to as the <b>diffraction focus</b>. The distance betwee these two foci, known as the focal shift \(\Delta f\), increases with decreasing beam Fresnel number \(N = a^2 / \lambda f\) where \(a\) is the beam radius, \(z\) is the distance to the beam focus and \(\lambda\) is the light wavelength.
 
 <figure>
-    <img src="{{ site.baseurl }}/assets/img/Figure - focal shift cartoon.png" alt="Focal shift diagram" class="img-fluid mx-auto p-3" width="50%">
+    <img src="{{ site.baseurl }}/assets/img/Figure - focal shift cartoon.png" alt="Focal shift diagram" class="img-fluid mx-auto p-3" style="max-width:500px;">
     <figcaption class="figure-caption text-center">Figure - Focal shift in a spherical wavefront (red lines= propagating from the left to right. The gray rays point towards the geometrical focus (dark red spot), while the point of maximum intensity, the diffraction focus,  is to the left (bright red spot).</figcaption>
 </figure> 
 
