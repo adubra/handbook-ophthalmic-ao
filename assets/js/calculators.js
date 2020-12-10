@@ -29,7 +29,7 @@ function drawPlot(expression, result, userInput){
         var startRange = -10;
         var endRange = 10;
         if (result){
-            var max = Math.round(result) * 2;
+            var max = Math.round(userInput["x"]) * 2;
             startRange = - max;
             endRange = max;
         }
@@ -59,6 +59,14 @@ function drawPlot(expression, result, userInput){
                 },
                 // Configuration options go here
                 options: {
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+                    },
                     scales:{
                         xAxes: [{
                             type: 'linear',
@@ -80,7 +88,7 @@ function drawPlot(expression, result, userInput){
             });
             chart.data.labels.push(expression);
             chart.data.datasets.forEach((dataset) => {
-                dataset.data = yValuesIfM; //.push(yValuesIfM);
+                dataset.data = yValuesIfM;
             });
             
             chart.update(0);
