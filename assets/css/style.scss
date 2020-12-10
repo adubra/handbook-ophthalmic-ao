@@ -23,6 +23,20 @@
     color: #212529;
 }
 
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+p a:not([href*='{{ site.baseurl }}']):not([href^='#']):not([href^='/']):after {
+    font-family: 'FontAwesome';
+    content: " \f08e";
+    font-size: 0.875em;
+}
+
 #sidenav {
     top: 70px !important;
     padding-bottom: 30px;
