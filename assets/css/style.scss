@@ -80,3 +80,7 @@ figcaption::before {
     counter-increment: section;
     content: "Figure " counter(section) " - ";
 }
+
+.MathJax {
+    font-size: 1.1em !important;
+}
