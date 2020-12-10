@@ -72,3 +72,11 @@ button[aria-expanded="true"] .fa {
 #bootstrap-overrides h2 {
     font-size: 1.9rem;
 }
+
+body {
+    counter-reset: section;
+}
+figcaption::before {
+    counter-increment: section;
+    content: "Figure " counter(section) " - ";
+}
