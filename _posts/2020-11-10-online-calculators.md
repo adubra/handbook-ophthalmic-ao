@@ -11,16 +11,16 @@ HINT TO SELF: <a href="#Focal_shift_calculator2">other calculator</a>
 -->
 
 <div>
-<h3 id="Focal_shift_calculator">Focal shift calculator</h3>
+<h3 id="Focal_shift_calculator">Focal shift</h3>
 
-There are two points of interest in a converging spherical wavefront. The <b>geometrical focus</b>, where the rays orthogonal to the wavefront converge (see figure below), and the point of maximum intensity , which is shifted towards the incoming waefront due to diffraction, and it is therefore referred to as the <b>diffraction focus</b>. The distance betwee these two foci, known as the focal shift \(\Delta f\), increases with decreasing beam Fresnel number \(N = a^2 / \lambda f\) where \(a\) is the beam radius, \(z\) is the distance to the beam focus and \(\lambda\) is the light wavelength.
+There are two points of interest near the focus of a converging spherical wavefront. The <b>geometrical focus</b>, where the rays orthogonal to the wavefront converge (see figure below), and the point of maximum intensity, which is shifted towards the incoming wavefront due to diffraction, is referred to as the <b>diffraction focus</b>. The distance between these two foci is called the focal shift \(\Delta z\). The relative focal shift \(\Delta z/z\) increases with decreasing beam Fresnel number \(N = a^2 / \lambda z\), where \(a\) is the beam radius, \(z\) is the distance to the beam focus and \(\lambda\) is the light wavelength.
 
 <figure>
     <img src="{{ site.baseurl }}/assets/img/Figure - focal shift cartoon.png" alt="Focal shift diagram" class="img-fluid mx-auto p-3" style="max-width:500px;">
     <figcaption class="figure-caption text-center">Figure - Focal shift in a spherical wavefront (red lines= propagating from the left to right. The gray rays point towards the geometrical focus (dark red spot), while the point of maximum intensity, the diffraction focus,  is to the left (bright red spot).</figcaption>
 </figure> 
 
-<p>When \(N > 1\), <a href="https://doi.org/10.1364/JOSA.72.000770" target="_blank">Yajun Li</a> calculated that the focal shift can be approximated as
+<p><a href="https://doi.org/10.1364/JOSA.72.000770" target="_blank">Yajun Li</a> (Eq. 3.12) derived an approximate formula for the focal shift when \(N \geq 0.5\) and \(F \geq 1\), 
 </p>
 <div>
     \begin{align*}
@@ -28,17 +28,17 @@ There are two points of interest in a converging spherical wavefront. The <b>geo
         -\frac{\pi^2 N^2}{12 \left( 1 + \frac{1}{8F^2} \right) \left[ 1 + N \left( 1- \frac{1}{16F^2}\right) \right]}                
             \right]\right\},
     \end{align*}
-    where \(F = z / 2a\).
+    where the f-number, \(F = z / 2a\). The negative sign indicates that the diffraction focus is always shifted towards the light source. 
 </div>
-
-<p>Similarlly, when \(N > 1\), <a href="https://doi.org/10.1364/JOSA.72.000770" target="_blank">Yajun Li</a> and <a href="https://doi.org/10.1364/JOSAA.20.002156">Colin J. R. Sheppard and Peter Török</a> arrive to a different formula (VYAS TODO what are the hypothesis, or valid ranges??)
+<p>
+<p><a href="https://doi.org/10.1364/JOSAA.20.002156">Colin J. R. Sheppard and Peter Török</a> (Eq. 17) arrived at a simpler formula for high numerical aperture systems with small focal shifts, and,
 </p>
 <div>
     \begin{align*}
-    \Delta f \simeq - f \left[(\cos(\alpha/2))^2 + (\pi^2 N^2/12) (\sec(\alpha/2))^2\right],
+    \Delta f \simeq - \frac{f}{\cos^2(\alpha/2) + \left(\pi^2 N^2/12\right) \sec^2(\alpha/2)},
     \end{align*}
 </div>
-where \(\alpha = \sin^{-1}(a /f)\).
+where \(\alpha = \sin^{-1}(a/z)\).
 
 
 
@@ -87,7 +87,7 @@ where \(\alpha = \sin^{-1}(a /f)\).
         </div>
         <div class="row mb-3">
             <div class="col-9">
-                <label class="col-form-label">F-number (\(F\)):</label>
+                <label class="col-form-label">f-number (\(F\)):</label>
             </div>
             <div class="col-3">
                 <input readonly disabled class="form-control" id="calcultionResult" />
@@ -95,7 +95,7 @@ where \(\alpha = \sin^{-1}(a /f)\).
         </div>
         <div class="row mb-3">
             <div class="col-9">
-                <label class="col-form-label">Focal shift \(\Delta f\), Li, mm):</label>
+                <label class="col-form-label">Focal shift (\(\Delta z\), <a href="https://doi.org/10.1364/JOSA.72.000770" target="_blank">Li</a>, mm):</label>
             </div>
             <div class="col-3">
                 <input readonly disabled class="form-control" id="calcultionResult" />
@@ -103,7 +103,7 @@ where \(\alpha = \sin^{-1}(a /f)\).
         </div>
         <div class="row mb-3">
             <div class="col-9">
-                <label class="col-form-label">Focal shift \(\Delta f\), Sheppard & Török, mm):</label>
+                <label class="col-form-label">Focal shift (\(\Delta z\), <a href="https://doi.org/10.1364/JOSAA.20.002156">Sheppard & Török</a>, mm):</label>
             </div>
             <div class="col-3">
                 <input readonly disabled class="form-control" id="calcultionResult" />
@@ -117,7 +117,7 @@ where \(\alpha = \sin^{-1}(a /f)\).
 <canvas id="plot"></canvas>
 -->
 
-</div>
+
 
 <script src="https://unpkg.com/mathjs@8.1.0/lib/browser/math.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>

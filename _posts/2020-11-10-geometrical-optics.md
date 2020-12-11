@@ -9,7 +9,7 @@ permalink: /geometrical-optics
 
 ## Notation conventions
 
-TODO
+TODO Definitions
 
 ## Wavefront aberrations
 
