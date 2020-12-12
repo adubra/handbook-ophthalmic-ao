@@ -1,25 +1,60 @@
 $(document).ready(function(){
 
 
-$('#frmSampleCalculation1').submit(function(event){
+$('#form_focal_shift_calculator').submit(function(event){
     event.preventDefault();
 
-    //Get form data
-    var formData = new FormData($(this)[0]);
-    var x = formData.get('X');
-    var m = formData.get('M');
+    // Getting form data in units of meter
+    var formData                    = new FormData($(this)[0]);
+    var distance_to_geometric_focus = 1e-3 * formData.get('distance_to_geometric_focus_mm');
+    var beam_diameter               = 1e-3 * formData.get('beam_diameter_mm');
+    var wavelength                  = 1e-9 * formData.get('wavelength_nm')
 
-    //Do some validation here if you want
-   
-    //Do calculation
-    var expression = "x^2 + (sqrt(m) * sin(x)) + (m * cos(x/2))"; 
-    var result = math.compile(expression).evaluate({x: x, m: m});
-    var userInput = {"x": x, "m": m};
-    drawPlot(expression, result, userInput);
-    $('#calcultionResult').val(result);
+    // Calculating Fresnel number
+    var N_string                    = "pow(a,2) / (lambda*z)"; 
+    var N_value                     = math.compile("round(" + N_string  + ",n_digits)").evaluate(
+                                            {z               : distance_to_geometric_focus,
+                                             a               : beam_diameter/2,
+                                             lambda          : wavelength,
+                                             n_digits        : 3});
+    
+    // Calculating F-number
+    var F_string                    = "z / (2*a)"; 
+    var F_result                    = math.compile("round(" + F_string + ",n_digits)").evaluate(
+                                            {z               : distance_to_geometric_focus,
+                                             a               : beam_diameter/2,
+                                             n_digits        : 3});
+        
+    // Focal shift calculation using Li's formula
+    var focal_shift_Li_string       = "-12 * z * (1 + 1/(8 * pow(" + F_string + ",2))) / pow(pi*" +
+                                      N_string + ",2) *" + " (1-exp(-pow(pi*" + N_string +
+                                      ",2) /(12*(1+1/(8*pow(" + F_string + ",2)))) / (1+" +
+                                      N_string + "*(1-1/(16*pow(" + F_string + ",2))))))";    
+    var focal_shift_Li_value_mm = math.compile("round(1e3*" + focal_shift_Li_string + ",n_digits)").evaluate(
+                                            {z               : distance_to_geometric_focus,
+                                             a               : beam_diameter/2,
+                                             lambda          : wavelength,
+                                             n_digits        : 3});
+
+    // Focal shift calculation using Sheppard and Török's formula
+    var focal_shift_Sheppard_n_Torok        = "- z / (pow(cos(asin(a/z)/2),2) + (pow(pi*" + N_string +
+                                              ",2)/12))*pow(sec(asin(a/z)/2),2)";
+    var focal_shift_Sheppard_n_Torok_value_mm = math.compile("round(1e3*" + focal_shift_Sheppard_n_Torok +
+                                              ",n_digits)").evaluate(
+                                            {z               : distance_to_geometric_focus,
+                                             a               : beam_diameter/2,
+                                             lambda          : wavelength,
+                                             n_digits        : 3});
+
+    // focal shifts output in mm
+    $('#Fresnel_number').val(N_value);
+    $('#F_number').val(F_result);
+    $('#Focal_shift_Li').val(focal_shift_Li_value_mm);
+    $('#Focal_shift_Sheppard_n_Torok').val(focal_shift_Sheppard_n_Torok_value_mm);
 });
 
-
+//drawPlot(expression, result, userInput);
+    
 var chart = '';
 function drawPlot(expression, result, userInput){
     try {
