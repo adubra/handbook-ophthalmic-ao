@@ -12,10 +12,13 @@ HINT TO SELF: <a href="#Focal_shift_calculator2">other calculator</a>
 TODO: Emily, how do I insert the symbol for bibliographic references at external sites?
       Two of those needed below.
 
-// TODO: ask Emily how to add warning if outside the approximation valid range
+TODO: ask Emily how to add warning if outside the approximation valid range
 
-// TODO: how do we number equations automatically?
-    
+TODO: how do we number equations automatically?
+
+TODO: Emily how do I highlight hyperlinks to download code? I guess I keep coming back
+      to the fact that the current color scheme makes it a bit hard to see what is a
+      hyperlink. Should we change it?   
 -->
 
 <h3 id="Focal_shift_definition">Focal shift</h3>
@@ -46,6 +49,12 @@ TODO: Emily, how do I insert the symbol for bibliographic references at external
 </div>
 <p>where \(\alpha = \sin^{-1}(a/z)\).
 </p>
+<p>
+Download a <b style="color:#e65100">Matlab</b> <a href="{{ site.baseurl }}/assets/code_matlab/fn_focal_shift_calculator.m">focal shift calculator function</a> and a <a href="{{ site.baseurl }}/assets/code_matlab/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>.
+
+Download a <b style="color:#0d47a1">Python</b> <a href="{{ site.baseurl }}/assets/code_python/fn_focal_shift_calculator.m">focal shift calculator function</a> and a <a href="{{ site.baseurl }}/assets/code_python/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>.
+ /p>
+
 
 <h3 id="Focal_shift_calculator">Focal shift calculator</h3>
 
@@ -118,9 +127,9 @@ TODO: Emily, how do I insert the symbol for bibliographic references at external
                 <input readonly disabled class="form-control text-right" id="Focal_shift_Sheppard_n_Torok" />
             </div>
         </div>
-    </div>
-    
+    </div>    
 </div>
+
 
 <br>
 <h3 id="Focal_shift_in_SHWS_lenslets">Focal shift in the Shack-Hartmann wavefront sensor</h3>
