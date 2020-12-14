@@ -18,8 +18,11 @@
 .content a {
     color: #736C51;
 }
+.post a {
+    text-decoration: underline;
+}
 .content a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: #212529;
 }
 
