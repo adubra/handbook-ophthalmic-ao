@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 $('#form_focal_shift_calculator').validate({
     rules: {
         distance_to_geometric_focus_mm: {
