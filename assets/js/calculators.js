@@ -1,14 +1,38 @@
 $(document).ready(function(){
 
+$('#form_focal_shift_calculator').validate({
+    rules: {
+        distance_to_geometric_focus_mm: {
+            required: true,
+            number: true,
+            min:1,
+            max:5
+        },
+        beam_diameter_mm: {
+            required: true,
+            number: true,
+            min:1,
+            max:5
+        }
+    }
+});
 
 $('#form_focal_shift_calculator').submit(function(event){
     event.preventDefault();
+
+    // Only continue if the form is valid
+    if (!$(this).valid()){
+        return;
+    }
 
     // Getting form data in units of meter
     var formData                    = new FormData($(this)[0]);
     var distance_to_geometric_focus = 1e-3 * formData.get('distance_to_geometric_focus_mm');
     var beam_diameter               = 1e-3 * formData.get('beam_diameter_mm');
     var wavelength                  = 1e-9 * formData.get('wavelength_nm')
+
+
+
 
     // Calculating Fresnel number
     var N_string                    = "pow(a,2) / (lambda*z)"; 

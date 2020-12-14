@@ -34,7 +34,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-p a:not([href*='{{ site.baseurl }}']):not([href^='#']):not([href^='/']):after {
+.post-content a:not([href*='{{ site.baseurl }}']):not([href^='#']):not([href^='/']):after {
     font-family: 'FontAwesome';
     content: " \f08e";
     font-size: 0.875em;
@@ -86,4 +86,8 @@ figcaption::before {
 
 .MathJax {
     font-size: 1.1em !important;
+}
+
+label.error {
+    color: red;
 }
