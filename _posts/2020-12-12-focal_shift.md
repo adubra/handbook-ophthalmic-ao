@@ -11,6 +11,10 @@ HINT TO SELF: <a href="#Focal_shift_calculator2">other calculator</a>
 
 Emily, is this how you add multiple authors to a page (see file header)
 
+Emily, other than adding the new file to the toc file, I see that the contributors pages do not update. Do I need to do something about it or is it because I entered more than one author? This will be a common thing.
+
+Emily, if We already say here in the header that "category" is Part 1, do we still have to add it to the toc file? Can we do one or the other for the sake of simplicity and code integrity?
+
 TODO: Emily, how do I insert the symbol for bibliographic references at external sites?
       Two of those needed below.
 
@@ -137,10 +141,10 @@ Download a <b style="color:#0d47a1">Python</b> <a href="{{ site.baseurl }}/asset
 <h3 id="Focal_shift_in_SHWS_lenslets">Focal shift in the Shack-Hartmann wavefront sensor</h3>
 
 <p>
-When a positive lens free of wavefront aberrations is normally illuminated with a plane wave, the Fresnel number, and thus the focal shift can be calculated n in terms of the lens clear aperture diameter \(D_L\) and its back (geometrical) focal length \(f_L\). In most imaging applications, however, the relative focal shift \(\Delta f_L / f_L\) is negligible. For example, in a typical human eye \( f_{eye}\approx\)16.7 mm imaged with a conventional optical coherence tomgrapher \(D_{beam} \approx\)1.0 mm using 850 nm light, \(\Delta f_{eye} / f_{beam} \approx \)-0.4%. If, on the other hand, we consider a typical Shack-Hartmann wavefront sensor lenslet with 200 um diameter and 8 mm focal length, we have that the relative focal shift is approximately 29-36%, which is not negligible.
+When a positive lens free of wavefront aberrations is normally illuminated with a plane wave, the Fresnel number, and thus the focal shift can be calculated n in terms of the lens clear aperture diameter \(D_L\) and its back (geometrical) focal length \(f_L\). In most imaging applications, however, the relative focal shift \(\Delta f_L / f_L\) is negligible. For example, in a typical human eye \( f_{\textrm{eye}}\approx\)16.7 mm imaged with a conventional optical coherence tomgrapher \(D_{\textrm{beam}} \approx\)1.0 mm using 850 nm light, \(\Delta f_{\textrm{eye}} / f_{\textrm{beam}} \approx \)-0.4%. If, on the other hand, we consider a typical Shack-Hartmann wavefront sensor lenslet with 200 um diameter and 8 mm focal length, we have that the relative focal shift is approximately 29-36%, which is not negligible.
 </p>
 <p>
-Now the important question is why should we care about the focal shift in a Shack-Hartmann wavefront sensor? Because if the pixelated detector is not placed in the geometrical focus, then the centroid of partially illuminated lenslets will be biased in a wavefront-independent manner. This can be solved by ignoring partially illuminated lenslets in the wavefront estimation or reconstruction algorithm, but that could be problematic if the wavefront illuminating the Shack-Hartmann wavefront sensor lenslet array does not have a uniform intensity profile. A more elegant, and arguably simple, solution is to put the pixelated sensor in the geometrical focal plane of the lenslet array, as demonstrated by <a href="https://doi.org/10.1364/OL.44.004151" target="_blank">V. Akondi and A. Dubra</a>. The proposed pixelated sensor focusing approach does not require the calculation of the focal shift, but rather allows finding the geometrical focus by empirically minimizing centroid bias using a test wavefront.
+Now the important question is, <b>why should we care about the focal shift in a Shack-Hartmann wavefront sensor?</b> Because if the pixelated detector is not placed in the geometrical focus, then the centroid of partially illuminated lenslets will be biased in a wavefront-independent manner. This can be solved by ignoring partially illuminated lenslets in the wavefront estimation or reconstruction algorithm, but that could be problematic if the wavefront illuminating the Shack-Hartmann wavefront sensor lenslet array does not have a uniform intensity profile. A more elegant, and arguably simple, solution is to put the pixelated sensor in the geometrical focal plane of the lenslet array, as demonstrated by <a href="https://doi.org/10.1364/OL.44.004151" target="_blank">V. Akondi and A. Dubra</a>. The proposed pixelated sensor focusing approach does not require the calculation of the focal shift, but rather allows finding the geometrical focus by empirically minimizing centroid bias using a test wavefront.
 </p>
 
 
