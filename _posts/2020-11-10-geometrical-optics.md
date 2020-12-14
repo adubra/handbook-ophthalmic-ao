@@ -2,7 +2,7 @@
 layout: post
 title:  "Geometrical optics"
 date:   2020-11-02 15:39:57 -0800
-category: Part 1
+category:
 author: Alfredo Dubra
 permalink: /geometrical-optics
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Polarization"
 date:   2020-11-02 17:40:57 -0800
-category: Part 1
+category:
 author: 
 permalink: /polarization
 ---

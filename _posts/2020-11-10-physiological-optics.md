@@ -2,7 +2,7 @@
 layout: post
 title:  "Physiological optics"
 date:   2020-11-02 17:59:57 -0800
-category: Part 1
+category:
 author: 
 permalink: /physiological-optics
 ---

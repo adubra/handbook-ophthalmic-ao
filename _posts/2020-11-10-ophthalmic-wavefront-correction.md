@@ -2,7 +2,7 @@
 layout: post
 title:  "Ophthalmic wavefront correction"
 date:   2020-11-02 20:41:57 -0800
-category: Part 1
+category:
 author: 
 permalink: /ophthalmic-wavefront-correction
 ---
