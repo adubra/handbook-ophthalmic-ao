@@ -49,30 +49,21 @@ TODO: get the matlab-icon CSS to work
     \end{align*}
 </div>
 <p>where \(\alpha = \sin^{-1}(a/z)\).
-</p>
-<p>
-<p>Download code here:
-</p>
+
+<h5 class="mt-3">Download code here:</h5>
+
 <ul>
-    <li><span style="color:#e65100">Matlab </span> - <a href="{{ site.baseurl }}/assets/code_matlab/fn_focal_shift_calculator.m">focal shift calculator function</a>
+    <li><span class="matlab-color">Matlab <i class="matlab-icon"></i> </span> - <a href="{{ site.baseurl }}/assets/code_matlab/fn_focal_shift_calculator.m">focal shift calculator function</a>
     </li>
-    <li><span style="color:#e65100">Matlab</span> - <a href="{{ site.baseurl }}/assets/code_matlab/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>
+    <li><span class="matlab-color">Matlab <i class="matlab-icon"></i></span> - <a href="{{ site.baseurl }}/assets/code_matlab/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>
     </li>
-    <li><span style="color:#0d47a1">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/fn_focal_shift_calculator.py">focal shift calculator function</a>
+    <li><span class="python-color">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/fn_focal_shift_calculator.py">focal shift calculator function</a>
     </li>
-    <li><span style="color:#0d47a1">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/test_fn_focal_shift_calculator_01.py">script demonstrating its use</a>
+    <li><span class="python-color">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/test_fn_focal_shift_calculator_01.py">script demonstrating its use</a>
     </li>
 <br>
 </ul>
 
-
-
-before and <i class="matlab-icon"></i>after
-
-
-<p>
-Something must be written here <a href="#fig_focal_shift_definition">Fig. XX</a>
-</p>
 
 
 <h3 id="Focal_shift_calculator">Focal shift calculator</h3>

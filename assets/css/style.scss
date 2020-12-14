@@ -94,8 +94,17 @@ label.error {
 }
 
 .matlab-icon {
-    background: url('{{ site.baseurl }}/assets/img/Matlab_logo.png');
-    width:      20px;
-    height:     20px;
-    display:    block;
+    background-image: url('{{ site.baseurl }}/assets/img/Matlab_logo.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+}
+
+.matlab-color {
+    color: #e65100;
+}
+.python-color {
+    color: #0d47a1;
 }
