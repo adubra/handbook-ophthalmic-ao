@@ -24,7 +24,9 @@ sections:
             
     - url: /online-calculators
             
-    - url: /optical-design-of-ophthalmoscopes 
+    - url: /optical-design-of-ophthalmoscopes
+
+    - url: /focal_shift
 
 - title: Part 2
   chapters:
