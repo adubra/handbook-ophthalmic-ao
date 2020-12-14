@@ -3,7 +3,7 @@ layout: post
 title:  "Focal shift"
 date:   2020-12-12 22:41:57 -0800
 category: Part 1
-author: Vyas Akondi and Alfredo Dubra
+author: Vyas Akondi, Alfredo Dubra
 permalink: /focal_shift
 ---
 <!--

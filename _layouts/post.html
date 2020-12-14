@@ -6,18 +6,29 @@ layout: default
         <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
         <div class="post-meta">
             {% if page.author %}
-                {% assign authors = site.contributors | where: "title", page.author %}
-                {% if authors == empty %}
-                    By {{ page.author }}
-                {% else %}
-                    {% assign author = authors | first %}
-                    By <a href="{{ author.url | prepend: site.baseurl }}"><span itemprop="author" itemtype="http://schema.org/Person">{{ author.title }}</span></a>
-                {% endif %}
-            {% else %} 
+                <!--Split the authors by comma-->
+                {% assign post_authors = page.author | split: "," %}
+                    By 
+                {% assign authors_array = "" | split: ',' %}
+                {% for post_author in post_authors %}
+                    <!--Find out if this author is in the authors collections -->
+                    {% assign strip_author = post_author | strip %}
+                    {% assign authors = site.contributors | where: "title", strip_author %}
+                    {% if authors == empty %}
+                        {% assign authors_array = authors_array | push: page.author %} 
+                        <!--{{ page.author }}--> 
+                    {% else %}
+                        {% assign author = authors | first %}
+                        {% capture author_html %} <a href={{ author.url | prepend: site.baseurl }}><span itemprop='author' itemtype='http://schema.org/Person'>{{ author.title }}</span></a>{% endcapture %}
+                        {% assign authors_array = authors_array | push: author_html %} 
+                        <!--<a href='{{ author.url | prepend: site.baseurl }}'><span itemprop='author' itemtype='http://schema.org/Person'>{{ author.title }}</span></a>-->
+                    {% endif %}
+                {% endfor %}
+                {{ authors_array | join: "," }}
             {% endif %}
         </div>
     </header>
-    
+
     <div class="post-content" itemprop="text">
         {{ page.content | markdownify }}
     </div>
