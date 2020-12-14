@@ -2,7 +2,7 @@
 layout: contributor
 title: Alfredo Dubra
 short_name: Alf
-position: Associate Professor, Ophthalmology
+position: Associate Professor, Ophthalmology, Stanford University
 image_path: "/assets/img/People/Alfredo_Dubra_PhD.bmp"
 role: Editor
 ---

@@ -2,7 +2,6 @@
 layout: post
 title:  "Retinal imaging"
 date:   2020-11-02 18:41:57 -0800
-category:
 author: 
 permalink: /retinal-imaging
 ---

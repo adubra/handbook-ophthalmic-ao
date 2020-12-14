@@ -2,7 +2,6 @@
 layout: post
 title:  "Retina structure and optical properties"
 date:   2020-11-02 18:39:57 -0800
-category:
 author: 
 permalink: /retina-structure
 ---

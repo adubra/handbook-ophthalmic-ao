@@ -2,7 +2,6 @@
 layout: post
 title:  "Sample optical designs"
 date:   2020-11-03 08:41:57 -0800
-category:
 author: 
 permalink: /sample-optical-designs
 ---

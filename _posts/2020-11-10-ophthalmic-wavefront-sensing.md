@@ -2,7 +2,6 @@
 layout: post
 title:  "Ophthalmic wavefront sensing"
 date:   2020-11-02 19:41:57 -0800
-category:
 author: 
 permalink: /ophthalmic-wavefront-sensing
 ---

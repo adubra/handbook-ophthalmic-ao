@@ -2,7 +2,6 @@
 layout: post
 title:  "Online calculators"
 date:   2020-11-02 22:41:57 -0800
-category:
 author:
 permalink: /online-calculators
 ---

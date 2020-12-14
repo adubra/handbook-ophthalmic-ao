@@ -2,37 +2,31 @@
 layout: post
 title:  "Focal shift"
 date:   2020-12-12 22:41:57 -0800
-category: 
 author: Vyas Akondi, Alfredo Dubra
 permalink: /focal_shift
 ---
 <!--
-HINT TO SELF: <a href="#Focal_shift_calculator2">other calculator</a>
+TODO: how to limit data entry to only numbers, integers or positive floats.
 
-Emily, is this how you add multiple authors to a page (see file header)
+TODO: make sure that href ...# something add offset to account for top banner.
 
-Emily, other than adding the new file to the toc file, I see that the contributors pages do not update. Do I need to do something about it or is it because I entered more than one author? This will be a common thing.
+TODO: figure out how to use dataval to retrieve the figure number.
 
-Emily, if We already say here in the header that "category" is Part 1, do we still have to add it to the toc file? Can we do one or the other for the sake of simplicity and code integrity?
+TODO: implement warning when F >= 1 or N>=1 (results, rather than inputs)
 
-TODO: Emily, how do I insert the symbol for bibliographic references at external sites?
-      Two of those needed below.
+TODO: how do we number equations and figures automatically (latex-like??
 
-TODO: ask Emily how to add warning if outside the approximation valid range
-
-TODO: how do we number equations automatically?
-
-TODO: Emily how do I highlight hyperlinks to download code? I guess I keep coming back
-      to the fact that the current color scheme makes it a bit hard to see what is a
-      hyperlink. Should we change it?   
+TODO: get the matlab-icon CSS to work
 -->
+
+<script src="{{ '/assets/js/calculators.js' | relative_url }}"></script>
 
 <h3 id="Focal_shift_definition">Focal shift</h3>
 
 <p>There are two points of interest near the focus of a converging spherical wavefront. The <b>geometrical focus</b>, where the rays orthogonal to the wavefront converge (see figure below), and the point of maximum intensity, which is shifted towards the incoming wavefront due to diffraction, and it is therefore referred to as the <b>diffraction focus</b>. The distance between these two foci, that is, the <b>focal shift</b> (\(\Delta z\)), is a function of the Fresnel number \(N = a^2 / \lambda z\), where \(a\) is the beam radius at a distance \(z\) to the geometrical focus and \(\lambda\) is the light wavelength.
 </p>
 
-<figure>
+<figure id="fig_focal_shift_definition">
     <img src="{{ site.baseurl }}/assets/img/Figure - focal shift cartoon.png" alt="Focal shift diagram" class="img-fluid mx-auto" style="max-width:55%;">
     <figcaption class="figure-caption text-center text-justify">Focal shift in a spherical wavefront (red lines= propagating from the left to right. The gray rays point towards the geometrical focus (hollow red spot), while the point of maximum intensity, the diffraction focus, is to the left (full red spot).</figcaption>
 </figure> 
@@ -40,13 +34,14 @@ TODO: Emily how do I highlight hyperlinks to download code? I guess I keep comin
 <p><a href="https://doi.org/10.1364/JOSA.72.000770" target="_blank">Yajun Li</a> (Eq. 3.12) derived an approximate formula for the focal shift of a rotationally symmetric converging wavefront when \(N \geq 0.5\) and \(F \geq 1\), 
 </p>
 <div>
-    \begin{align*}
-    \Delta z \simeq - \frac{12 z \left(1 + \frac{1}{8F^2}\right)}{ \pi^2 N^2} \left\{  1 - \exp  \left[
-        -\frac{\pi^2 N^2}{12 \left( 1 + \frac{1}{8F^2} \right) \left[ 1 + N \left( 1- \frac{1}{16F^2}\right) \right]}                
+    \begin{equation}
+        \Delta z \simeq - \frac{12 z \left(1 + \frac{1}{8F^2}\right)}{ \pi^2 N^2} \left\{  1 - \exp  \left[
+            -\frac{\pi^2 N^2}{12 \left( 1 + \frac{1}{8F^2} \right) \left[ 1 + N \left( 1- \frac{1}{16F^2}\right) \right]}                
             \right]\right\},
-    \end{align*}
+        \label{eq:silly_equation_name}
+    \end{equation}
 </div>
-<p>where the f-number of the beam, \(F = z / 2a\). The negative sign indicates that the diffraction focus is always shifted towards the converging wavefront. <a href="https://doi.org/10.1364/JOSAA.20.002156" target="_blank">Colin J. R. Sheppard and Peter Török</a> (Eq. 17) arrived at a simpler formula for high numerical aperture systems with small focal shifts,
+<p>where the f-number of the beam, \(F = z / 2a\). The negative sign indicates that the diffraction focus is always shifted towards the converging wavefront. <a href="https://doi.org/10.1364/JOSAA.20.002156" target="_blank">Colin J. R. Sheppard and Peter Török</a> (Eq. 17) arrived at a simpler formula for high numerical aperture systems with small focal shifts, \(\eqref{eq:silly_equation_name}\)
 </p>
 <div>
     \begin{align*}
@@ -56,10 +51,28 @@ TODO: Emily how do I highlight hyperlinks to download code? I guess I keep comin
 <p>where \(\alpha = \sin^{-1}(a/z)\).
 </p>
 <p>
-Download a <b style="color:#e65100">Matlab</b> <a href="{{ site.baseurl }}/assets/code_matlab/fn_focal_shift_calculator.m">focal shift calculator function</a> and a <a href="{{ site.baseurl }}/assets/code_matlab/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>.
+<p>Download code here:
+</p>
+<ul>
+    <li><span style="color:#e65100">Matlab </span> - <a href="{{ site.baseurl }}/assets/code_matlab/fn_focal_shift_calculator.m">focal shift calculator function</a>
+    </li>
+    <li><span style="color:#e65100">Matlab</span> - <a href="{{ site.baseurl }}/assets/code_matlab/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>
+    </li>
+    <li><span style="color:#0d47a1">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/fn_focal_shift_calculator.py">focal shift calculator function</a>
+    </li>
+    <li><span style="color:#0d47a1">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/test_fn_focal_shift_calculator_01.py">script demonstrating its use</a>
+    </li>
+<br>
+</ul>
 
-Download a <b style="color:#0d47a1">Python</b> <a href="{{ site.baseurl }}/assets/code_python/fn_focal_shift_calculator.m">focal shift calculator function</a> and a <a href="{{ site.baseurl }}/assets/code_python/test_fn_focal_shift_calculator_01.m">script demonstrating its use</a>.
- </p>
+
+
+before and <i class="matlab-icon"></i>after
+
+
+<p>
+Something must be written here <a href="#fig_focal_shift_definition">Fig. XX</a>
+</p>
 
 
 <h3 id="Focal_shift_calculator">Focal shift calculator</h3>
@@ -150,4 +163,3 @@ Now the important question is, <b>why should we care about the focal shift in a 
 
 <script src="https://unpkg.com/mathjs@8.1.0/lib/browser/math.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
-<script src="{{ '/assets/js/calculators.js' | relative_url }}"></script>

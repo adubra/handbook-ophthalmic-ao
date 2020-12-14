@@ -79,6 +79,7 @@ button[aria-expanded="true"] .fa {
 body {
     counter-reset: section;
 }
+
 figcaption::before {
     counter-increment: section;
     content: "Figure " counter(section) " - ";
@@ -90,4 +91,11 @@ figcaption::before {
 
 label.error {
     color: red;
+}
+
+.matlab-icon {
+    background: url('{{ site.baseurl }}/assets/img/Matlab_logo.png');
+    width:      20px;
+    height:     20px;
+    display:    block;
 }

@@ -2,7 +2,6 @@
 layout: post
 title:  "Sample code/algorithms"
 date:   2020-11-03 09:41:57 -0800
-category:
 author: 
 permalink: /sample-code
 ---

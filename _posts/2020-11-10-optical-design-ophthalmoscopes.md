@@ -2,7 +2,6 @@
 layout: post
 title:  "Optical design of ophthalmoscopes"
 date:   2020-11-02 23:41:57 -0800
-category:
 author:
 permalink: /optical-design-of-ophthalmoscopes
 ---
