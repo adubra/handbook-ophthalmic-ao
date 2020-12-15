@@ -67,10 +67,9 @@ TODO: get the matlab-icon CSS to work
 
 
 <h3 id="Focal_shift_calculator">Focal shift calculator</h3>
-
+<form id="form_focal_shift_calculator">
 <div class="row mt-3">
     <div class="col-lg-6">
-        <form id="form_focal_shift_calculator">
             <div class="row mb-3">
                 <div class="col-lg-8">
                     <label class="col-form-label">Distance to geometric focus (mm):</label>
@@ -100,7 +99,6 @@ TODO: get the matlab-icon CSS to work
                     <button type="submit" class="btn btn-primary">Calculate</button>
                 </div>
             </div>
-        </form>
     </div>
     <div class="col-lg-6">
         <div class="row mb-3">
@@ -108,7 +106,7 @@ TODO: get the matlab-icon CSS to work
                 <label class="col-form-label">Fresnel number:</label>
             </div>
             <div class="col-4">
-                <input readonly disabled class="form-control text-right" id="Fresnel_number"/>
+                <input  readonly  class="form-control text-right" id="Fresnel_number" name="Fresnel_number"/>
             </div>
         </div>
         <div class="row mb-3">
@@ -116,7 +114,7 @@ TODO: get the matlab-icon CSS to work
                 <label class="col-form-label">f-number:</label>
             </div>
             <div class="col-4">
-                <input readonly disabled class="form-control text-right" id="F_number"/>
+                <input readonly class="form-control text-right" id="F_number" name="F_number"/>
             </div>
         </div>
         <div class="row mb-3">
@@ -139,7 +137,7 @@ TODO: get the matlab-icon CSS to work
         </div>
     </div>    
 </div>
-
+</form>
 
 <br>
 <h3 id="Focal_shift_in_SHWS_lenslets">Focal shift in the Shack-Hartmann wavefront sensor</h3>

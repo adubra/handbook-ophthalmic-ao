@@ -5,15 +5,33 @@ $('#form_focal_shift_calculator').validate({
         distance_to_geometric_focus_mm: {
             required: true,
             number: true,
-            min:1,
-            max:5
+            min:0
+            //max:5
         },
         beam_diameter_mm: {
             required: true,
             number: true,
-            min:1,
-            max:5
+            min:0
+            //max:5
+        },
+        wavelength_nm:{
+            required: true,
+            number: true
+        },
+        Fresnel_number: {
+            max:1,
+        },
+        F_number: {
+            max: 1
         }
+    },
+    messages: {
+        Fresnel_number: {
+            max: "The Fresnel number must be less or equal to 1."
+        },
+        F_number: {
+            max: "The F number must be less or equal to 1."
+        },
     }
 });
 
@@ -21,6 +39,10 @@ $('#form_focal_shift_calculator').submit(function(event){
     event.preventDefault();
 
     // Only continue if the form is valid
+    $('#Fresnel_number').val("");
+    $('#F_number').val("");
+    $('#Focal_shift_Li').val("");
+    $('#Focal_shift_Sheppard_n_Torok').val("");
     if (!$(this).valid()){
         return;
     }
@@ -75,6 +97,9 @@ $('#form_focal_shift_calculator').submit(function(event){
     $('#F_number').val(F_result);
     $('#Focal_shift_Li').val(focal_shift_Li_value_mm);
     $('#Focal_shift_Sheppard_n_Torok').val(focal_shift_Sheppard_n_Torok_value_mm);
+
+    var isValid = $(this).valid();
+
 });
 
 //drawPlot(expression, result, userInput);
