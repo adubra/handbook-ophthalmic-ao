@@ -6,17 +6,6 @@ author: Vyas Akondi, Alfredo Dubra
 permalink: /focal_shift
 ---
 <!--
-TODO: how to limit data entry to only numbers, integers or positive floats.
-
-TODO: make sure that href ...# something add offset to account for top banner.
-
-TODO: figure out how to use dataval to retrieve the figure number.
-
-TODO: implement warning when F >= 1 or N>=1 (results, rather than inputs)
-
-TODO: how do we number equations and figures automatically (latex-like??
-
-TODO: get the matlab-icon CSS to work
 -->
 
 <h3 id="Focal_shift_definition">Focal shift</h3>

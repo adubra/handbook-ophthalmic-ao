@@ -19,25 +19,25 @@ $('#form_focal_shift_calculator').validate({
             number: true
         },
         Fresnel_number: {
-            max:1,
+            min:0.5,
         },
         F_number: {
-            lessThan: 1
+            NoSmallerThan: 0.5
         }
     },
     messages: {
         Fresnel_number: {
-            max: "The Fresnel number must be less than 1."
+            min: $.validator.format("Must be >={0}")
         }
     }
 });
 
 // Sample code for custom validation
-$.validator.addMethod("lessThan", function(currentValue, validatedElement, parameter){
+$.validator.addMethod("NoSmallerThan", function(currentValue, validatedElement, parameter){
     //Return true if an element is valid. 
-    var isValid = currentValue < parameter || this.optional(validatedElement);
+    var isValid = (currentValue >= parameter) || this.optional(validatedElement);
     return isValid; 
-},  $.validator.format("Must be less than {0}."));
+},  $.validator.format("Must be >={0}"));
 
 
 $('#form_focal_shift_calculator').submit(function(event){
