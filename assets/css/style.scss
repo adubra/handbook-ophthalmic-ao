@@ -108,3 +108,10 @@ label.error {
 .python-color {
     color: #0d47a1;
 }
+
+:target:before {
+    content:"";
+    display:block;
+    height:60px;
+    margin:-60px 0 0;
+}
