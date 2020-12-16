@@ -2,7 +2,6 @@
 layout: post
 title:  "Sample mechanical designs"
 date:   2020-11-03 09:41:57 -0800
-category: Part 2
 author: 
 permalink: /sample-mechanical-design
 ---

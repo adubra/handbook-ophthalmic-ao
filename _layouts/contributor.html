@@ -7,7 +7,8 @@ layout: default
 {{ page.content | markdownify }}
 
 <!--!>List of contributions<!-->
-{% assign contributions = site.posts | where: "author", page.title %}
+{% assign contributions = site.posts | where_exp: "item", "item.author contains page.title" %}
+<!--where "author", "page.title"-->
 {% if contributions.size > 0 %}
 <h2 class="mt-4">Authored Chapters</h2>
 <ul>

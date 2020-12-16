@@ -2,7 +2,6 @@
 layout: post
 title:  "Ophthalmic adaptive optics"
 date:   2020-11-02 21:41:57 -0800
-category: Part 1
 author: 
 permalink: /ophthalmic-adaptive-optics
 ---

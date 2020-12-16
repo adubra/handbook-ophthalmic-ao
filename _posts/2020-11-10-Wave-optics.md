@@ -2,7 +2,6 @@
 layout: post
 title:  "Wave optics/Diffraction"
 date:   2020-11-02 17:39:57 -0800
-category: Part 1
 author: 
 permalink: /wave-optics
 ---

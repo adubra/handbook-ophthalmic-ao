@@ -18,8 +18,11 @@
 .content a {
     color: #736C51;
 }
+.post-content a {
+    text-decoration: underline;
+}
 .content a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: #212529;
 }
 
@@ -31,7 +34,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-p a:not([href*='{{ site.baseurl }}']):not([href^='#']):not([href^='/']):after {
+.post-content a:not([href*='{{ site.baseurl }}']):not([href^='#']):not([href^='/']):after {
     font-family: 'FontAwesome';
     content: " \f08e";
     font-size: 0.875em;
@@ -73,14 +76,42 @@ button[aria-expanded="true"] .fa {
     font-size: 1.9rem;
 }
 
-body {
+/*body {
     counter-reset: section;
 }
+
 figcaption::before {
     counter-increment: section;
     content: "Figure " counter(section) " - ";
-}
+}*/
 
 .MathJax {
     font-size: 1.1em !important;
+}
+
+label.error {
+    color: red;
+}
+
+.matlab-icon {
+    background-image: url('{{ site.baseurl }}/assets/img/Matlab_logo.png');
+    background-size: 16px; /*TODO: Upload smaller Matlab icon so we don't have to load large matlab image*/
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+}
+
+.matlab-color {
+    color: #e65100;
+}
+.python-color {
+    color: #0d47a1;
+}
+
+:target:before {
+    content:"";
+    display:block;
+    height:60px;
+    margin:-60px 0 0;
 }

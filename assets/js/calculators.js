@@ -1,14 +1,65 @@
 $(document).ready(function(){
 
+$('#form_focal_shift_calculator').validate({
+    rules: {
+        distance_to_geometric_focus_mm: {
+            required: true,
+            number: true,
+            min:0
+            //max:5
+        },
+        beam_diameter_mm: {
+            required: true,
+            number: true,
+            min:0
+            //max:5
+        },
+        wavelength_nm:{
+            required: true,
+            number: true
+        },
+        Fresnel_number: {
+            min:0.5,
+        },
+        F_number: {
+            NoSmallerThan: 0.5
+        }
+    },
+    messages: {
+        Fresnel_number: {
+            min: $.validator.format("Must be >={0}")
+        }
+    }
+});
+
+// Sample code for custom validation
+$.validator.addMethod("NoSmallerThan", function(currentValue, validatedElement, parameter){
+    //Return true if an element is valid. 
+    var isValid = (currentValue >= parameter) || this.optional(validatedElement);
+    return isValid; 
+},  $.validator.format("Must be >={0}"));
+
 
 $('#form_focal_shift_calculator').submit(function(event){
     event.preventDefault();
+
+    // Only continue if the form is valid
+    $('#Fresnel_number').val("");
+    $('#F_number').val("");
+    $('#Focal_shift_Li').val("");
+    $('#Focal_shift_Sheppard_n_Torok').val("");
+    if (!$(this).valid()){
+        return;
+    }
 
     // Getting form data in units of meter
     var formData                    = new FormData($(this)[0]);
     var distance_to_geometric_focus = 1e-3 * formData.get('distance_to_geometric_focus_mm');
     var beam_diameter               = 1e-3 * formData.get('beam_diameter_mm');
     var wavelength                  = 1e-9 * formData.get('wavelength_nm')
+
+
+
 
     // Calculating Fresnel number
     var N_string                    = "pow(a,2) / (lambda*z)"; 
@@ -51,6 +102,9 @@ $('#form_focal_shift_calculator').submit(function(event){
     $('#F_number').val(F_result);
     $('#Focal_shift_Li').val(focal_shift_Li_value_mm);
     $('#Focal_shift_Sheppard_n_Torok').val(focal_shift_Sheppard_n_Torok_value_mm);
+
+    var isValid = $(this).valid();
+
 });
 
 //drawPlot(expression, result, userInput);
