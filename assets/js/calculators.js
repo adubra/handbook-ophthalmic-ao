@@ -22,18 +22,23 @@ $('#form_focal_shift_calculator').validate({
             max:1,
         },
         F_number: {
-            max: 1
+            lessThan: 1
         }
     },
     messages: {
         Fresnel_number: {
-            max: "The Fresnel number must be less or equal to 1."
-        },
-        F_number: {
-            max: "The F number must be less or equal to 1."
-        },
+            max: "The Fresnel number must be less than 1."
+        }
     }
 });
+
+// Sample code for custom validation
+$.validator.addMethod("lessThan", function(currentValue, validatedElement, parameter){
+    //Return true if an element is valid. 
+    var isValid = currentValue < parameter || this.optional(validatedElement);
+    return isValid; 
+},  $.validator.format("Must be less than {0}."));
+
 
 $('#form_focal_shift_calculator').submit(function(event){
     event.preventDefault();
