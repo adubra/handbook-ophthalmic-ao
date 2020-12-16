@@ -19,8 +19,6 @@ TODO: how do we number equations and figures automatically (latex-like??
 TODO: get the matlab-icon CSS to work
 -->
 
-<script src="{{ '/assets/js/calculators.js' | relative_url }}"></script>
-
 <h3 id="Focal_shift_definition">Focal shift</h3>
 
 <p>There are two points of interest near the focus of a converging spherical wavefront. The <b>geometrical focus</b>, where the rays orthogonal to the wavefront converge (see figure below), and the point of maximum intensity, which is shifted towards the incoming wavefront due to diffraction, and it is therefore referred to as the <b>diffraction focus</b>. The distance between these two foci, that is, the <b>focal shift</b> (\(\Delta z\)), is a function of the Fresnel number \(N = a^2 / \lambda z\), where \(a\) is the beam radius at a distance \(z\) to the geometrical focus and \(\lambda\) is the light wavelength.
@@ -28,7 +26,7 @@ TODO: get the matlab-icon CSS to work
 
 <figure id="fig_focal_shift_definition">
     <img src="{{ site.baseurl }}/assets/img/Figure - focal shift cartoon.png" alt="Focal shift diagram" class="img-fluid mx-auto" style="max-width:55%;">
-    <figcaption class="figure-caption text-center text-justify">Focal shift in a spherical wavefront (red lines= propagating from the left to right. The gray rays point towards the geometrical focus (hollow red spot), while the point of maximum intensity, the diffraction focus, is to the left (full red spot).</figcaption>
+    <figcaption class="figure-caption text-center text-justify"><label for="fig_focal_shift_definition"></label> - Focal shift in a spherical wavefront (red lines= propagating from the left to right. The gray rays point towards the geometrical focus (hollow red spot), while the point of maximum intensity, the diffraction focus, is to the left (full red spot).</figcaption>
 </figure> 
 
 <p><a href="https://doi.org/10.1364/JOSA.72.000770" target="_blank">Yajun Li</a> (Eq. 3.12) derived an approximate formula for the focal shift of a rotationally symmetric converging wavefront when \(N \geq 0.5\) and \(F \geq 1\), 
@@ -150,5 +148,14 @@ Now the important question is, <b>why should we care about the focal shift in a 
 </p>
 
 
+
 <script src="https://unpkg.com/mathjs@8.1.0/lib/browser/math.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
+<script src="{{ '/assets/js/calculators.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/autonumber.js' | relative_url }}"></script>
+<script>
+    $(document).ready(function(){
+        autonumberByElement('figure', 'Figure');
+        renderLabels();
+    });
+</script>

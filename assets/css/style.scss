@@ -76,14 +76,14 @@ button[aria-expanded="true"] .fa {
     font-size: 1.9rem;
 }
 
-body {
+/*body {
     counter-reset: section;
 }
 
 figcaption::before {
     counter-increment: section;
     content: "Figure " counter(section) " - ";
-}
+}*/
 
 .MathJax {
     font-size: 1.1em !important;
@@ -95,7 +95,7 @@ label.error {
 
 .matlab-icon {
     background-image: url('{{ site.baseurl }}/assets/img/Matlab_logo.png');
-    background-size: 16px;
+    background-size: 16px; /*TODO: Upload smaller Matlab icon so we don't have to load large matlab image*/
     background-repeat: no-repeat;
     width: 14px;
     height: 16px;
