@@ -141,10 +141,3 @@ Now the important question is, <b>why should we care about the focal shift in a 
 <script src="https://unpkg.com/mathjs@8.1.0/lib/browser/math.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
 <script src="{{ '/assets/js/calculators.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/autonumber.js' | relative_url }}"></script>
-<script>
-    $(document).ready(function(){
-        autonumberByElement('figure', 'Figure');
-        renderLabels();
-    });
-</script>
