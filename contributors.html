@@ -6,7 +6,7 @@ permalink: /contributors
 {% assign authors_sorted = site.contributors | sort: "last_name" %}
 {% assign roles =  site.contributors |  map: 'role' | join: ','  | split: ',' | uniq %}
 {% for role in roles %}
-  <h2 class="mb-3">{{ role }}s</h2>
+  <h2 class="mb-3">{{ role }}</h2>
   <ul class="list-unstyled ml-0">
     {% for author in authors_sorted  %}
     {% if author.role == role %}
