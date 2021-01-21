@@ -2,36 +2,22 @@ title: Chapters
 sections:
 - title: Part 1
   chapters:
-    - url: /introduction
-
-    - url: /geometrical-optics
-
-    - url: /wave-optics
-
-    - url: /polarization
-
-    - url: /physiological-optics
-
-    - url: /retina-structure     
-      
-    - url: /retinal-imaging  
-            
-    - url: /ophthalmic-wavefront-sensing 
-            
-    - url: /ophthalmic-wavefront-correction 
-            
-    - url: /ophthalmic-adaptive-optics  
-            
-    - url: /online-calculators
-            
-    - url: /optical-design-of-ophthalmoscopes
-
+#    - url: /introduction
+#    - url: /geometrical-optics
+#    - url: /wave-optics
+#    - url: /polarization
+#    - url: /physiological-optics
+#    - url: /retina-structure    
+#    - url: /retinal-imaging  
+#    - url: /ophthalmic-wavefront-sensing 
+#    - url: /ophthalmic-wavefront-correction 
+#    - url: /ophthalmic-adaptive-optics        
+#    - url: /online-calculators
+#    - url: /optical-design-of-ophthalmoscopes
     - url: /focal_shift
+    - url: /zernike_polynomials
 
-- title: Part 2
-  chapters:
-    - url: /sample-optical-designs
-
-    - url: /sample-code
-
-
+#- title: Part 2
+#  chapters:
+#    - url: /sample-optical-designs
+#    - url: /sample-code
