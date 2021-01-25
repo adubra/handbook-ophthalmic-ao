@@ -22,17 +22,17 @@ permalink: /focal_shift
 </p>
 <div>
     \begin{equation}
-        \Delta z \simeq - \frac{12 z \left(1 + \frac{1}{8F^2}\right)}{ \pi^2 N^2} \left\{  1 - \exp  \left[
+        \Delta z_{L} \simeq - \frac{12 z \left(1 + \frac{1}{8F^2}\right)}{ \pi^2 N^2} \left\{  1 - \exp  \left[
             -\frac{\pi^2 N^2}{12 \left( 1 + \frac{1}{8F^2} \right) \left[ 1 + N \left( 1- \frac{1}{16F^2}\right) \right]}                
             \right]\right\},
-        \label{eq:silly_equation_name}
+        \label{eq:Li_focal_shift_equation_name}
     \end{equation}
 </div>
-<p>where the f-number of the beam, \(F = z / 2a\). The negative sign indicates that the diffraction focus is always shifted towards the converging wavefront. <a href="https://doi.org/10.1364/JOSAA.20.002156" target="_blank">Colin J. R. Sheppard and Peter Török</a> (Eq. 17) arrived at a simpler formula for high numerical aperture systems with small focal shifts, \(\eqref{eq:silly_equation_name}\)
+<p>where the f-number of the beam, \(F = z / 2a\). The negative sign indicates that the diffraction focus is always shifted towards the converging wavefront. <a href="https://doi.org/10.1364/JOSAA.20.002156" target="_blank">Colin J. R. Sheppard and Peter Török</a> (Eq. 17) arrived at a simpler formula for high numerical aperture systems with small focal shifts,
 </p>
 <div>
     \begin{align*}
-    \Delta z \simeq - \frac{z}{\cos^2(\alpha/2) + \left(\pi^2 N^2/12\right) \sec^2(\alpha/2)},
+    \Delta z_{S-T} \simeq - \frac{z}{\cos^2(\alpha/2) + \left(\pi^2 N^2/12\right) \sec^2(\alpha/2)},
     \end{align*}
 </div>
 <p>where \(\alpha = \sin^{-1}(a/z)\).
