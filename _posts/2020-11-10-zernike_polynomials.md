@@ -8,32 +8,57 @@ permalink: /zernike_polynomials
 <!--
 -->
 
-<h3 id="zernike_definition">Definition</h3>
+<h3 id="zernike_definition">Definition in polar coordinate system</h3>
 
-<p>The <a href="https://en.wikipedia.org/wiki/Zernike_polynomials" target="_blank">Zernike polymials</a>  form an orthogonal basis within the unit circle, when defined as follows,
+<p>The <a href="https://en.wikipedia.org/wiki/Zernike_polynomials" target="_blank">Zernike polymials</a>  form an orthogonal basis within the unit circle, when defined using polar coordinates (\(\rho,\theta\))  as follows,
 </p>
 <div>
     \begin{eqnarray} \label{zernike_definition_B&W}
-        Z_n^m (\rho,\theta)& = & \sqrt{\frac{2(n+1)}{1 + \delta_{m,0}}} ~ R_n^m(\rho) ~ \cos(m\theta) ~~~~~~(m \geq 0),\\
-        && \nonumber\\
-        Z_n^m (\rho,\theta) & = & \sqrt{2(n+1)} ~R_n^m(\rho) ~
-        \sin(m\theta)~~~~~~(m < 0),
-    \end{eqnarray}    
+        Z_n^m (\rho,\theta)& = & N_n^m R_n^{|m|}(\rho)
+        \begin{cases}
+            \cos(|m|\theta), & \text{for $m \geq 0$} \\
+            \sin(|m|\theta), & \text{for $m < 0$}
+        \end{cases} \\
+    \end{eqnarray}
 </div>
-<p> where \(\delta_{i,j}\) is the  Kronecker's delta function,
-\(\rho,\theta\) are polar coordinates with \(\theta\) measured from
-the \(y\) axis (TODO: Vyas, is this true? and
+<p> where \(\theta\) measured from the \(x\) axis, \(\delta_{m,0}\) is the Kroneckers delta function, and
 </p>
 <div>
     \begin{equation}\label{Zernike_radial_part}
-    R_{n}^{m}(\rho)=\sum_{s=0}^{(n-m)/2}(-1)^{s}\frac{(n-s)!}{s![(n+m)/2-s]![(n-m)/2-s]!}\rho^{n-2s}
+        R_{n}^{|m|}(\rho) = \sum_{s=0}^{(n-|m|)/2}\frac{(-1)^{s}(n-s)!}{s![(n+|m|)/2-s]![(n-|m|)/2-s]!}\rho^{n-2s},
     \end{equation}
 </div>
-<p>with only the indices \(n\) and \(m\) which meet the conditions \(n \geq
-0\), \(n \geq |m|\) and \(n-|m|\) is even are allowed. The normalization factor, promoted by the Optical Society of America's document <a href="https://doi.org/10.1364/VSIA.2000.SuC1" target="_blank">Standards for
-Reporting the Optical Aberrations of Eyes</a> makes the polynomials have unit norm over the unit circle.
+<p>with the integer indices \(n\) and \(m\) that meet the conditions \(n \geq
+0\), \(|m| \leq n\), and \(n-|m|\) is even, are allowed. The normalization factor, 
+\begin{equation}
+    N_n^m = \sqrt{\frac{2(n+1)}{1 + \delta_{m,0}}},
+\end{equation} 
+which is promoted by the Optical Society of America's document <a href="https://doi.org/10.1364/VSIA.2000.SuC1" target="_blank">Standards for Reporting the Optical Aberrations of Eyes</a> makes the polynomials have unit norm.
 </p>
-TODO: Vyas, should we create a figure showing the xy plane with the unit circle and polar coordinates?
+
+<!-- TODO: Vyas, should we create a figure showing the xy plane with the unit circle and polar coordinates? -->
+
+<h3 id="zernike_definition">Definition in Cartesian coordinate system</h3>
+
+The Zernike polynomials can also be expressed in Cartesian coordinates as follows (See <a href="https://doi.org/10.1016/0030-4018(94)90241-0" target="_blank"> Carpio & Malacara</a> and section 4 in <a href="https://doi.org/10.1364/OE.393223" target="_blank"> Akondi & Dubra</a>)
+
+<div>
+\begin{eqnarray} \label{zernike_definition_Carpio_Malacara_1}
+    Z_n^{m \geq 0} (x,y) = N_n^m \sum_{k=0}^{n'} \binom{n'}{k} & &\binom{n'+|m|+k}{n'} \sum_{v=0}^k \binom{k}{v} \nonumber \\
+                                                               & & \sum_{p=\lceil v/2 \rceil}^{\lfloor (k+|m|+v)/2 \rfloor} (-1)^{n'-k+v+p} \binom{k+|m|}{2p-v} x^{2k+|m|-2p} y^{2p}, \text{and}
+\end{eqnarray}
+</div>
+
+<div>
+\begin{eqnarray} \label{zernike_definition_Carpio_Malacara_2}
+    Z_n^{m < 0} (x,y) = N_n^m \sum_{k=0}^{n'} \binom{n'}{k} & &\binom{n'+|m|+k}{n'} \sum_{v=0}^k \binom{k}{v} \nonumber \\
+                                                            & & \sum_{p=\lceil (v+1)/2 \rceil}^{\lfloor (k+|m|+v+1)/2 \rfloor} (-1)^{n'-k+v+p-1} \binom{k+|m|}{2p-1-v} x^{2k+|m|-2p+1} y^{2p-1},
+\end{eqnarray}
+</div>
+
+<p> where \(n'\)=(\(n\)-\(|m|\))/2.
+</p>
+
 
 <h5 class="mt-3">Download code here:</h5>
 
@@ -69,7 +94,7 @@ the SROAE one index notation.
 <h5 class="mt-3">Download code here:</h5>
 
 <ul>
-    <li><span class="matlab-color">Matlab <i class="matlab-icon"></i> </span> - <a href="{{ site.baseurl }}/assets/code_matlab/fn_zernike_index_conversion.m">2 to 1 and 1 to 2 Zernike index conversion function</a>
+    <li><span class="matlab-color">Matlab <i class="matlab-icon"></i> </span> - <a href="{{ site.baseurl }}/assets/code_matlab/fn_zernike_index_conversion.m">Function to convert Single index to Double index Zernike notation and vice versa</a>
     </li>
     <li><span class="python-color">Python <i class="fab fa-python"></i></span> - <a href="{{ site.baseurl }}/assets/code_python/fn_focal_shift_calculator.py">TODO function</a>
     </li>
@@ -240,13 +265,13 @@ and astigmatism simultaneously.\\
 
 
 <br>
-<h3 id="Focal_shift_in_SHWS_lenslets">Focal shift in the Shack-Hartmann wavefront sensor</h3>
+
 
 <p>
-When a positive lens free of wavefront aberrations is normally illuminated with a plane wave, the Fresnel number, and thus the focal shift can be calculated n in terms of the lens clear aperture diameter \(D_L\) and its back (geometrical) focal length \(f_L\). In most imaging applications, however, the relative focal shift \(\Delta f_L / f_L\) is negligible. For example, in a typical human eye \( f_{\textrm{eye}}\approx\)16.7 mm imaged with a conventional optical coherence tomgrapher \(D_{\textrm{beam}} \approx\)1.0 mm using 850 nm light, \(\Delta f_{\textrm{eye}} / f_{\textrm{beam}} \approx \)-0.4%. If, on the other hand, we consider a typical Shack-Hartmann wavefront sensor lenslet with 200 um diameter and 8 mm focal length, we have that the relative focal shift is approximately 29-36%, which is not negligible.
+
 </p>
 <p>
-Now the important question is, <b>why should we care about the focal shift in a Shack-Hartmann wavefront sensor?</b> Because if the pixelated detector is not placed in the geometrical focus, then the centroid of partially illuminated lenslets will be biased in a wavefront-independent manner. This can be solved by ignoring partially illuminated lenslets in the wavefront estimation or reconstruction algorithm, but that could be problematic if the wavefront illuminating the Shack-Hartmann wavefront sensor lenslet array does not have a uniform intensity profile. A more elegant, and arguably simple, solution is to put the pixelated sensor in the geometrical focal plane of the lenslet array, as demonstrated by <a href="https://doi.org/10.1364/OL.44.004151" target="_blank">V. Akondi and A. Dubra</a>. The proposed pixelated sensor focusing approach does not require the calculation of the focal shift, but rather allows finding the geometrical focus by empirically minimizing centroid bias using a test wavefront.
+
 </p>
 
 
