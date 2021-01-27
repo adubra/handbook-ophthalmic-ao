@@ -1,0 +1,36 @@
+% FN_SYMBOLIC_ZERNIKE_CARTESIAN evaluates the symbolic Zernike polynomials
+%   in Cartesian coordinate system.
+%
+%   Syntax:
+%       syms_Zernike_polynomial_cartesian                               ...
+%                   = fn_symbolic_Zernike_cartesian(n_index, m_index)
+%
+%   n_index and m_index are the radial and azimuthal coordinates of the
+%   Zernike polynomial. syms_Zernike_polynomial_cartesian is the symbolic 
+%   Zernike polynomial.
+%
+%   This function uses another function fn_symbolic_Zernike_polar.
+%
+%   See also fn_symbolic_Zernike_polar
+% 
+%   Vyas Akondi and Alfredo Dubra 2020
+%--------------------------------------------------------------------------
+
+function syms_Zernike_polynomial_cartesian                              ...
+                    = fn_symbolic_Zernike_cartesian(n_index,m_index,x,y,rho,theta)
+
+% Evaluate Zernike defocus in polar coordinates
+sym_Zernike_polynomial_polar        = fn_symbolic_Zernike_polar(n_index,...
+                                                                m_index,...
+                                                                rho,    ...
+                                                                theta);
+% Define the 2-D Zernike in Cartesian coordinates by substitution
+syms_Zernike_polynomial_cartesian   = subs(subs(                        ...
+                                           sym_Zernike_polynomial_polar,...
+                                           rho,   sqrt(x^2+y^2)),       ...
+                                           theta, atan(y/x));
+% Simplification
+syms_Zernike_polynomial_cartesian   = simplify(expand(simplify(         ...
+                                      syms_Zernike_polynomial_cartesian,...
+                                      'IgnoreAnalyticConstraints', true)),...
+                                      'IgnoreAnalyticConstraints', true);
