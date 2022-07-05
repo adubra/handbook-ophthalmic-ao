@@ -159,7 +159,8 @@ simple form
     \end{figure}
 </div>
 
-<div>
+
+<!--
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
   \hline
@@ -181,7 +182,35 @@ simple form
   \hline
 \end{tabular}
 \end{center}
+-->
+<div>
+    <table class="text-center">
+        <thead>
+            <tr>
+                <th>\(n\)</th>
+                <th>\(m\)</th>
+                <th>\(Z_n^m(\rho,\theta)\)</th>
+                <th>\(Z_n^m(x,y)\)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0</td><td>0</td><td>1</td><td>1</td><td>piston</td></tr>
+            <tr><td>1</td><td>-1</td><td>\(2 \rho \sin \theta\)</td><td>\(2x\)</td><td>tip</td></tr>
+            <tr><td>1</td><td>-1</td><td>\(2 \rho \sin \theta\)</td><td>\(2y\)</td><td>tilt</td></tr>
+            <tr><td>2</td><td>-2</td><td>\(\sqrt{6} \rho^2 \sin ( 2 \theta )\)</td><td>\(2\sqrt{6}xy\)</td><td>astigmatism \(45^o\) </td></tr>
+            <tr><td>2</td><td>0</td><td>\(\sqrt{3} ( 2 \rho^2 -1 )\) </td><td>\(\sqrt{3} \left[2 (x^2+y^2) - 1\right]\)</td><td>defocus</td></tr>
+            <tr><td>2</td><td>2</td><td>\(\sqrt{6} \rho^2 \cos ( 2 \theta )\)</td><td>\(\sqrt{6} \left(y^2 - x^2\right)\)</td><td>astigmatism \(0^o\)</td></tr>
+            <tr><td>3</td><td>-3</td><td>\(\sqrt{8} \rho^3 \sin ( 3 \theta )\)</td><td>\(\sqrt{8} \left(3xy^2-x^3\right)\)</td><td>triangular astigmatism \(x\)-axis</td></tr>
+            <tr><td>3</td><td>-1</td><td>\(\sqrt{8} (3\rho^3-2\rho)\sin (3\theta)\)</td><td>\(\sqrt{8} \left(-2x+3xy^2+3x^3\right)\)</td><td>third order coma \(x\)-axis</td></tr>
+            <tr><td>3</td><td>1</td><td>\(\sqrt{8} (3\rho^3-2\rho)\cos (3\theta)\)</td><td>\(-2y+3yx^2+3y^3\)</td><td>third order coma \(y\)-axis</td></tr>
+            <tr><td>3</td><td>3</td><td>\(\sqrt{8} \rho^3 \cos ( 3 \theta )\)</td><td>\(-3yx^2+y^3\)</td><td>triangular astigmatism \(y\)-axis</td></tr>
+            <tr><td>$\vdots$</td><td>$\vdots$</td><td>$\vdots$</td><td>$\vdots$</td><td>$\vdots$</td></tr>
+            <tr><td>4</td><td>0</td><td>$\sqrt{5}\left(6\rho^4 - 6\rho^2 +1\right)$</td><td>$\sqrt{5}\left[6(x^2+y^2)^2 - 6(x^2+y^2)+1\right]$</td><td>spherical aberration</td></tr>
+        </tbody>
+    </table>
 </div>
+
 
 <h3 id="zernike_conversion_to_diopters">Conversion to diopters</h3>
 
